@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Dropbox
+.dropbox
+.dropbox.attr
+*.sb-*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
