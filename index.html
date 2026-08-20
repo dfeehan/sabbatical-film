@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Sabbatical in Film</title>
+<style>
+:root{--bg:#faf8f5;--panel:#f2ede6;--ink:#1f1d1b;--muted:#6b6560;--accent:#7a2e2e;
+--rule:#ddd5ca;--code:#eee8e0;--max:44rem}
+@media(prefers-color-scheme:dark){:root{--bg:#161514;--panel:#1e1c1a;--ink:#e8e4de;
+--muted:#9b938a;--accent:#c98b7e;--rule:#332f2b;--code:#26231f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:16px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+-webkit-font-smoothing:antialiased}
+#wrap{display:flex;min-height:100vh;align-items:flex-start}
+aside{position:sticky;top:0;height:100vh;overflow-y:auto;flex:0 0 19rem;
+background:var(--panel);border-right:1px solid var(--rule);padding:1.5rem 1.1rem 3rem}
+.brand{font:600 1.05rem/1.3 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+color:var(--accent);margin-bottom:.15rem}
+.brandsub{font:400 .74rem/1.4 ui-sans-serif,-apple-system,sans-serif;color:var(--muted);
+margin-bottom:1.2rem}
+.tabs{display:flex;flex-direction:column;gap:.25rem;margin-bottom:1.4rem}
+.tab{all:unset;cursor:pointer;padding:.42rem .6rem;border-radius:5px;
+font:500 .82rem/1.3 ui-sans-serif,-apple-system,sans-serif;color:var(--muted)}
+.tab:hover{background:rgba(122,46,46,.08);color:var(--ink)}
+.tab.active{background:var(--accent);color:#fff}
+.navgroup{display:none}.navgroup.show{display:block}
+.navhead{display:none}
+.navlink{display:block;padding:.3rem .6rem;border-left:2px solid transparent;
+font:400 .79rem/1.4 ui-sans-serif,-apple-system,sans-serif;color:var(--muted);
+text-decoration:none;margin-bottom:.05rem}
+.navlink:hover{color:var(--ink);border-left-color:var(--accent)}
+.navlink.current{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;padding:3rem 3rem 6rem;display:flex;justify-content:center}
+.inner{width:100%;max-width:var(--max)}
+.doc{display:none}.doc.show{display:block}
+.doctitle{font:700 2rem/1.2 ui-sans-serif,-apple-system,sans-serif;color:var(--accent);
+margin:0 0 1.8rem}
+h2{font:700 1.28rem/1.3 ui-sans-serif,-apple-system,sans-serif;color:var(--accent);
+margin:2.6rem 0 .2rem;padding-top:1.4rem;border-top:1px solid var(--rule);scroll-margin-top:1.5rem}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+h3{font:600 .95rem/1.4 ui-sans-serif,-apple-system,sans-serif;color:var(--muted);
+margin:.2rem 0 1.2rem;letter-spacing:.02em}
+h4{font:600 .93rem/1.4 ui-sans-serif,-apple-system,sans-serif;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+ul,ol{margin:0 0 1.1rem;padding-left:1.3rem}
+li{margin-bottom:.45rem}
+li>em:first-child{font-style:italic}
+strong{font-weight:600}
+hr{border:none;border-top:1px solid var(--rule);margin:2.2rem 0}
+a{color:var(--accent)}
+blockquote{margin:1.2rem 0;padding-left:1rem;border-left:2px solid var(--rule);
+color:var(--muted);font-style:italic}
+code{background:var(--code);padding:.1em .35em;border-radius:3px;font-size:.87em}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;
+font:400 .84rem/1.5 ui-sans-serif,-apple-system,sans-serif}
+th{text-align:left;font-weight:600;border-bottom:1.5px solid var(--rule);
+padding:.5rem .55rem;color:var(--muted);font-size:.78rem;letter-spacing:.03em;
+text-transform:uppercase}
+td{padding:.5rem .55rem;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:hover td{background:rgba(122,46,46,.045)}
+.pdflink{display:inline-block;margin-bottom:1.6rem;padding:.32rem .7rem;
+border:1px solid var(--rule);border-radius:5px;text-decoration:none;
+font:500 .76rem ui-sans-serif,-apple-system,sans-serif;color:var(--muted)}
+.pdflink:hover{border-color:var(--accent);color:var(--accent)}
+#menu{display:none}
+@media(max-width:860px){
+  #wrap{display:block}
+  aside{position:static;height:auto;width:100%;flex:none;border-right:none;
+  border-bottom:1px solid var(--rule)}
+  main{padding:1.6rem 1.2rem 4rem}
+  .navgroup{display:none!important}
+}
+@media print{
+  aside{display:none}main{padding:0}.doc{display:block!important}
+  .pdflink,.tabs{display:none}
+  h2{page-break-after:avoid}table,li{page-break-inside:avoid}
+}
+</style></head><body>
+<div id="wrap">
+<aside>
+  <div class="brand">A Sabbatical in Film</div>
+  <div class="brandsub">42 weeks &middot; 24 Aug 2026 &ndash; 4 Jul 2027<br>85 core films</div>
+  <div class="tabs"><button class="tab active" data-doc="syllabus">The Syllabus</button>
+<button class="tab" data-doc="watch">Where to Watch</button>
+<button class="tab" data-doc="comparison">Comparison</button></div>
+  <div class="navgroup" data-doc="syllabus"><div class="navhead">The Syllabus<span class="navblurb">42 weeks, 85 films</span></div><a class="navlink" href="#syllabus-how-to-use-this">How to use this</a>
+<a class="navlink" href="#syllabus-unit-1-the-grammar">Unit 1 · The Grammar</a>
+<a class="navlink" href="#syllabus-unit-2-the-studio-system">Unit 2 · The Studio System</a>
+<a class="navlink" href="#syllabus-unit-3-silents-the-short-version">Unit 3 · Silents, the Short Version</a>
+<a class="navlink" href="#syllabus-unit-4-italy-rubble-to-ennui">Unit 4 · Italy: Rubble to Ennui</a>
+<a class="navlink" href="#syllabus-unit-5-the-french-new-wave-and-what-it-stole">Unit 5 · The French New Wave and What It Stole</a>
+<a class="navlink" href="#syllabus-unit-6-japan">Unit 6 · Japan</a>
+<a class="navlink" href="#syllabus-unit-7-the-northern-interior">Unit 7 · The Northern Interior</a>
+<a class="navlink" href="#syllabus-unit-8-new-hollywood">Unit 8 · New Hollywood</a>
+<a class="navlink" href="#syllabus-unit-9-hong-kong-and-taiwan">Unit 9 · Hong Kong and Taiwan</a>
+<a class="navlink" href="#syllabus-unit-10-off-the-usual-axis">Unit 10 · Off the Usual Axis</a>
+<a class="navlink" href="#syllabus-unit-11-germany-and-the-political-film">Unit 11 · Germany and the Political Film</a>
+<a class="navlink" href="#syllabus-unit-12-cinema-now">Unit 12 · Cinema Now</a>
+<a class="navlink" href="#syllabus-unit-13-capstone-cinema-as-pure-form">Unit 13 · Capstone — Cinema as Pure Form</a>
+<a class="navlink" href="#syllabus-the-numbers">The numbers</a>
+<a class="navlink" href="#syllabus-slack-built-in">Slack built in</a></div><div class="navgroup" data-doc="watch"><div class="navhead">Where to Watch<span class="navblurb">streaming availability</span></div><a class="navlink" href="#watch-the-headline">The headline</a>
+<a class="navlink" href="#watch-what-to-actually-subscribe-to">What to actually subscribe to</a>
+<a class="navlink" href="#watch-the-one-real-problem-film">The one real problem film</a>
+<a class="navlink" href="#watch-important-caveat">Important caveat</a>
+<a class="navlink" href="#watch-by-unit">By unit</a>
+<a class="navlink" href="#watch-rental-shopping-list">Rental shopping list</a></div><div class="navgroup" data-doc="comparison"><div class="navhead">Comparison<span class="navblurb">vs. 11 university syllabi</span></div><a class="navlink" href="#comparison-the-eleven-courses">The eleven courses</a>
+<a class="navlink" href="#comparison-three-species-of-course">Three species of course</a>
+<a class="navlink" href="#comparison-scale">Scale</a>
+<a class="navlink" href="#comparison-where-the-canons-agree">Where the canons agree</a>
+<a class="navlink" href="#comparison-where-they-diverge-the-honest-finding">Where they diverge — the honest finding</a>
+<a class="navlink" href="#comparison-what-id-actually-change">What I’d actually change</a></div>
+</aside>
+<main><div class="inner"><section class="doc" id="doc-syllabus" data-doc="syllabus"><h1 class="doctitle">The Syllabus</h1><a class="pdflink" href="sabbatical-film-syllabus.pdf">Download PDF &#8599;</a>
+<p><strong>42 weeks · 24 Aug 2026 – 4 Jul 2027 · 85 core films, ~127 with extensions</strong></p>
+<hr />
+<h2 id="syllabus-how-to-use-this">How to use this</h2>
+<p>Each week has <strong>two core films</strong> and <strong>one optional extension</strong>. Two is the floor; take the extension in weeks when you have the time or the unit has its hooks in you. That lands you at 2–3 films a week as planned, without the schedule becoming a debt you owe.</p>
+<p>Four weeks list three or four core films rather than two. In every case the extras are <strong>short</strong> — 14 to 32 minutes — and are marked as such. They’re there because avant-garde and documentary work is where the formal vocabulary gets isolated most clearly, and skipping it entirely would leave a real hole. A 28-minute film is not a third film; it’s an appendix to the one before it.</p>
+<p>Films are grouped into <strong>13 units of 3–4 weeks</strong>. Within a unit, the films talk to each other — an influence, a rebuttal, a second attempt at the same problem. This is the whole design. A single Antonioni film is a slog; three Antonioni-adjacent films in a row and you start to see what he was actually doing, which is when it gets interesting.</p>
+<p><strong>Three rules that matter more than the list:</strong></p>
+<ol type="1">
+<li><strong>One film per sitting, no phone.</strong> These were built for uninterrupted attention and collapse without it.</li>
+<li><strong>Write 3–4 sentences after each one</strong> — before you read anything about it. What did the camera do? What surprised you? What annoyed you? You know better than most that unrecorded observation evaporates.</li>
+<li><strong>Read the criticism <em>after</em>, never before.</strong> One piece, ten minutes. Sources listed per unit.</li>
+</ol>
+<p><strong>Where to find these:</strong> the Criterion Channel covers a large majority of this list and is the single best subscription for the project. MUBI, Kanopy (free with most university logins — check Berkeley’s), and your library fill most of the rest.</p>
+<p><strong>Optional scaffolding:</strong> Bordwell &amp; Thompson, <em>Film Art: An Introduction</em>. Read chapters 4–6 (mise-en-scène, cinematography, editing) during Unit 1. It’s about 100 pages and it gives you vocabulary you’ll use for the remaining 40 weeks. This is the closest thing to the class you never took.</p>
+<p><strong>If you fall behind:</strong> don’t catch up. Drop the extensions, drop a week, rejoin at the next unit boundary. The units are self-contained on purpose.</p>
+<hr />
+<h2 id="syllabus-unit-1-the-grammar">Unit 1 · The Grammar</h2>
+<h3 id="weeks-13-24-aug-13-sep-2026">Weeks 1–3 · 24 Aug – 13 Sep 2026</h3>
+<p>Six films chosen because each one makes a formal technique impossible to miss. Watch these with Bordwell open. The goal isn’t to love them — it’s to leave with words for what you’re seeing, so that everything after lands differently.</p>
+<p><strong>Week 1 · Aug 24–30</strong></p>
+<ul>
+<li><em>Citizen Kane</em> (1941, Welles) — deep focus, and a film that narrates itself in fragments. The whole vocabulary of “showy” filmmaking starts here.</li>
+<li><em>Rear Window</em> (1954, Hitchcock) — the purest demonstration of how editing constructs meaning. Two shots, one implication, no dialogue.</li>
+<li><em>Optional:</em> <em>North by Northwest</em> (1959, Hitchcock) — the crop-duster sequence is the standard textbook example of how editing builds tension out of nothing. Hitchcock appears in these academic syllabi more than any other director, and this is the film they teach.</li>
+</ul>
+<p><strong>Week 2 · Aug 31 – Sep 6</strong></p>
+<ul>
+<li><em>Do the Right Thing</em> (1989, Lee) — color, heat, and camera height as argument. Notice the Dutch angles arrive before the violence does.</li>
+<li><em>Chungking Express</em> (1994, Wong Kar-wai) — step-printing, handheld, and the discovery that a film’s <em>texture</em> can carry its emotion entirely.</li>
+<li><em>Optional:</em> <em>Killer of Sheep</em> (1978, Burnett)</li>
+</ul>
+<p><strong>Week 3 · Sep 7–13</strong></p>
+<ul>
+<li><em>Rashomon</em> (1950, Kurosawa) — the same events, four times. Watch how the camera’s behavior changes with each teller.</li>
+<li><em>The 400 Blows</em> (1959, Truffaut) — the long take and the freeze frame; how withholding a cut creates unease.</li>
+<li><em>Optional:</em> <em>Bicycle Thieves</em> is coming in Unit 4 — instead try <em>A Man Escaped</em> (1956, Bresson)</li>
+</ul>
+<p><strong>Read:</strong> Roger Ebert’s <em>Great Movies</em> essay on <em>Citizen Kane</em>; Bordwell &amp; Thompson chs. 4–6.</p>
+<hr />
+<h2 id="syllabus-unit-2-the-studio-system">Unit 2 · The Studio System</h2>
+<h3 id="weeks-47-14-sep-11-oct-2026">Weeks 4–7 · 14 Sep – 11 Oct 2026</h3>
+<p>Classical Hollywood at full operating efficiency. These are, without qualification, fun — which is the point. Genre is a set of constraints, and watching great directors work inside constraints is the fastest way to see directorial choice at all. Pay attention to how much these films accomplish in 95 minutes.</p>
+<p><strong>Week 4 · Sep 14–20 — Screwball</strong></p>
+<ul>
+<li><em>It Happened One Night</em> (1934, Capra)</li>
+<li><em>His Girl Friday</em> (1940, Hawks) — the dialogue overlaps by design. Don’t fight it.</li>
+<li><em>Optional:</em> <em>The Lady Eve</em> (1941, Sturges)</li>
+</ul>
+<p><strong>Week 5 · Sep 21–27 — The Western</strong></p>
+<ul>
+<li><em>Red River</em> (1948, Hawks)</li>
+<li><em>The Searchers</em> (1956, Ford) — the most influential and most morally uncomfortable American film of its decade. The doorway shots bookend it for a reason.</li>
+<li><em>Optional:</em> <em>Stagecoach</em> (1939, Ford)</li>
+</ul>
+<p><strong>Week 6 · Sep 28 – Oct 4 — Noir</strong></p>
+<ul>
+<li><em>Double Indemnity</em> (1944, Wilder)</li>
+<li><em>The Third Man</em> (1949, Reed) — noir style exported to bombed-out Vienna, with a zither.</li>
+<li><em>Optional:</em> <em>Out of the Past</em> (1947, Tourneur)</li>
+</ul>
+<p><strong>Week 7 · Oct 5–11 — Hollywood on itself</strong></p>
+<ul>
+<li><em>Singin’ in the Rain</em> (1952, Donen &amp; Kelly)</li>
+<li><em>Sunset Boulevard</em> (1950, Wilder) — the same subject, the sound-era transition, told as a horror film. Watch these back to back and the pairing does the work.</li>
+<li><em>Optional:</em> <em>The Bad and the Beautiful</em> (1952, Minnelli)</li>
+</ul>
+<p><strong>Read:</strong> Manny Farber, “Underground Films” (1957) — his case for Hawks, Walsh, and Mann as unpretentious craftsmen, and against exactly the prestige-Ford register of <em>The Searchers</em>. Useful precisely because it argues with this week’s assignments.</p>
+<hr />
+<h2 id="syllabus-unit-3-silents-the-short-version">Unit 3 · Silents, the Short Version</h2>
+<h3 id="weeks-810-12-oct-1-nov-2026">Weeks 8–10 · 12 Oct – 1 Nov 2026</h3>
+<p>You said silents are less appealing, so this unit is deliberately small and front-loaded with pleasure. Note the runtimes — <strong>every film in this unit is under 95 minutes</strong>, and four are under 70. Keaton first, because <em>Sherlock Jr.</em> is 45 minutes of the most inventive physical filmmaking ever committed, and it will recalibrate your expectations before you meet Dreyer.</p>
+<p>Weeks 9 and 10 carry an extra title each. Week 9 adds German Expressionism, which the plan otherwise skipped entirely and which every film-history course treats as foundational — and which Unit 2’s noir week is directly descended from. Week 10 adds two very short avant-garde films for the same reason: they isolate what narrative films do invisibly.</p>
+<p><strong>Week 8 · Oct 12–18 — Keaton</strong></p>
+<ul>
+<li><em>Sherlock Jr.</em> (1924, Keaton) — 45 min. A projectionist walks into the movie he’s showing. In 1924.</li>
+<li><em>The General</em> (1926, Keaton) — 79 min.</li>
+<li><em>Optional:</em> <em>City Lights</em> (1931, Chaplin) — 87 min</li>
+</ul>
+<p><strong>Week 9 · Oct 19–25 — Expressionism and the image at full power</strong></p>
+<ul>
+<li><em>The Cabinet of Dr. Caligari</em> (1920, Wiene) — 77 min. Painted shadows, tilted walls, a set that behaves like a state of mind. Watch it and Week 6’s noir stops looking like an American invention.</li>
+<li><em>Sunrise</em> (1927, Murnau) — 94 min. Murnau brings the Expressionist toolkit to Hollywood; the camera moves like nothing else would for thirty years.</li>
+<li><em>The Passion of Joan of Arc</em> (1928, Dreyer) — 82 min. Almost entirely faces. It is not a comfortable film, but it is a short one.</li>
+<li><em>Optional:</em> <em>Metropolis</em> (1927, Lang) or <em>Nosferatu</em> (1922, Murnau)</li>
+</ul>
+<p><strong>Week 10 · Oct 26 – Nov 1 — Montage and the avant-garde</strong></p>
+<ul>
+<li><em>Man with a Movie Camera</em> (1929, Vertov) — 68 min. A city symphony and a film about filmmaking; no plot, no intertitles, endlessly watchable.</li>
+<li><em>Battleship Potemkin</em> (1925, Eisenstein) — 75 min. Read the Odessa Steps sequence as the argument for editing that everything after is answering.</li>
+<li><em>Un Chien Andalou</em> (1929, Buñuel &amp; Dalí) — <strong>16 min.</strong> Surrealism’s demonstration that film can dispense with continuity entirely and still hold you.</li>
+<li><em>Meshes of the Afternoon</em> (1943, Deren) — <strong>14 min.</strong> The most-taught avant-garde film there is; it appears in more of the academic syllabi than <em>His Girl Friday</em>. Watch it twice — it’s fourteen minutes.</li>
+<li><em>Optional:</em> <em>The Crowd</em> (1928, Vidor)</li>
+</ul>
+<p><em>Four films, but the last two total half an hour. Real week runtime: about 2h 50m.</em></p>
+<p><strong>Read:</strong> David Bordwell’s blog, “Sherlock Jr.” posts; Eisenstein’s short essay “A Dialectic Approach to Film Form” (skim — the theory is dense, the examples are clear).</p>
+<hr />
+<h2 id="syllabus-unit-4-italy-rubble-to-ennui">Unit 4 · Italy: Rubble to Ennui</h2>
+<h3 id="weeks-1113-2-22-nov-2026">Weeks 11–13 · 2 – 22 Nov 2026</h3>
+<p>Postwar Italian cinema runs an arc in fifteen years from filming actual bombed streets with non-actors to filming rich people being bored in beautiful rooms. That arc is one of the most legible in film history, and each film comments on the last.</p>
+<p><strong>Week 11 · Nov 2–8</strong></p>
+<ul>
+<li><em>Rome, Open City</em> (1945, Rossellini) — shot in the months right after the Germans left Rome, partly on scrounged film stock, in a city that hadn’t yet been repaired.</li>
+<li><em>Bicycle Thieves</em> (1948, De Sica) — the neorealist thesis in its clearest form: no stars, real locations, a plot that could be a footnote.</li>
+<li><em>Optional:</em> <em>Umberto D.</em> (1952, De Sica)</li>
+</ul>
+<p><strong>Week 12 · Nov 9–15</strong></p>
+<ul>
+<li><em>L’Avventura</em> (1960, Antonioni) — a woman disappears and the film loses interest in finding her. Booed at Cannes; then it wasn’t.</li>
+<li><em>Il Sorpasso</em> (1962, Risi) — the comedy that diagnoses exactly the same postwar emptiness, and is a delight. The pairing is the lesson.</li>
+<li><em>Optional:</em> <em>L’Eclisse</em> (1962, Antonioni)</li>
+</ul>
+<p><strong>Week 13 · Nov 16–22</strong></p>
+<ul>
+<li><em>8½</em> (1963, Fellini) — a director who can’t make his film, making it.</li>
+<li><em>The Conformist</em> (1970, Bertolucci) — Storaro’s cinematography is the reason half of New Hollywood looks the way it does. Watch it and then rewatch bits of <em>The Godfather</em> in Unit 8.</li>
+<li><em>Optional:</em> <em>La Dolce Vita</em> (1960, Fellini) — 174 min</li>
+</ul>
+<p><strong>Read:</strong> Criterion’s essays on <em>L’Avventura</em> and <em>8½</em>.</p>
+<hr />
+<h2 id="syllabus-unit-5-the-french-new-wave-and-what-it-stole">Unit 5 · The French New Wave and What It Stole</h2>
+<h3 id="weeks-1416-23-nov-13-dec-2026">Weeks 14–16 · 23 Nov – 13 Dec 2026</h3>
+<p>The trick with the New Wave is that it’s usually taught as a rupture. It’s more useful as theft: a group of critics who loved American genre film and remade it with handheld cameras and no money. Each week here pairs a New Wave film with the thing it was stealing from or handing off to.</p>
+<p><strong>Week 14 · Nov 23–29</strong></p>
+<ul>
+<li><em>Bob le Flambeur</em> (1956, Melville) — the low-budget location-shot crime film that showed the younger critics it could be done.</li>
+<li><em>Breathless</em> (1960, Godard) — then the jump cuts. Having seen Melville first, you’ll see what’s new and what isn’t.</li>
+<li><em>Optional:</em> <em>The Killing</em> (1956, Kubrick)</li>
+</ul>
+<p><strong>Week 15 · Nov 30 – Dec 6</strong></p>
+<ul>
+<li><em>Cléo from 5 to 7</em> (1962, Varda) — near-real-time, and the best film of the movement by some distance.</li>
+<li><em>Jules and Jim</em> (1962, Truffaut)</li>
+<li><em>Optional:</em> <em>Band of Outsiders</em> (1964, Godard)</li>
+</ul>
+<p><strong>Week 16 · Dec 7–13</strong></p>
+<ul>
+<li><em>Contempt</em> (1963, Godard) — Godard with money, widescreen, and Brigitte Bardot; a film about the impossibility of the film it’s inside.</li>
+<li><em>Le Samouraï</em> (1967, Melville) — where the influence loops back. Almost no dialogue; every frame is composition.</li>
+<li><em>Optional:</em> <em>Pierrot le Fou</em> (1965, Godard)</li>
+</ul>
+<p><strong>Read:</strong> Truffaut, “A Certain Tendency of the French Cinema” (1954) — the manifesto, and short.</p>
+<p><em>(Holiday break: Dec 14 – Jan 3. Watch whatever you like, or nothing.)</em></p>
+<hr />
+<h2 id="syllabus-unit-6-japan">Unit 6 · Japan</h2>
+<h3 id="weeks-1720-4-31-jan-2027">Weeks 17–20 · 4 – 31 Jan 2027</h3>
+<p>The deepest single national tradition on this list and the biggest single gap for most self-taught viewers. Ozu first, because his style is so rigorously constrained that once you notice the rules, every other director’s choices become visible by contrast.</p>
+<p><strong>Week 17 · Jan 4–10 — Ozu</strong></p>
+<ul>
+<li><em>Late Spring</em> (1949, Ozu)</li>
+<li><em>Tokyo Story</em> (1953, Ozu) — the camera sits three feet off the floor and almost never moves. Count how often he cuts to an empty room.</li>
+<li><em>Optional:</em> <em>Early Summer</em> (1951, Ozu)</li>
+</ul>
+<p><strong>Week 18 · Jan 11–17 — Kurosawa, at length</strong></p>
+<ul>
+<li><em>Seven Samurai</em> (1954, Kurosawa) — 207 min. Take it as the week’s whole assignment; split across two nights if you like.</li>
+<li><em>Optional:</em> <em>Yojimbo</em> (1961, Kurosawa) — and note that Leone remade it as <em>A Fistful of Dollars</em></li>
+</ul>
+<p><strong>Week 19 · Jan 18–24</strong></p>
+<ul>
+<li><em>Ugetsu</em> (1953, Mizoguchi) — long takes, ghost story, and camera movement as moral commentary.</li>
+<li><em>Harakiri</em> (1962, Kobayashi) — the samurai film turned into an indictment of the samurai code. Formally immaculate.</li>
+<li><em>Optional:</em> <em>Sansho the Bailiff</em> (1954, Mizoguchi)</li>
+</ul>
+<p><strong>Week 20 · Jan 25–31</strong></p>
+<ul>
+<li><em>High and Low</em> (1963, Kurosawa) — a kidnapping procedural that splits cleanly into two formal halves. The first hour is nearly a filmed play.</li>
+<li><em>Woman in the Dunes</em> (1964, Teshigahara) — sand, in extreme close-up, for two and a half hours, and it works.</li>
+<li><em>Optional:</em> <em>Tokyo Drifter</em> (1966, Suzuki)</li>
+</ul>
+<p><strong>Read:</strong> Bordwell on Ozu (his blog has years of it); Criterion’s <em>Tokyo Story</em> essay.</p>
+<hr />
+<h2 id="syllabus-unit-7-the-northern-interior">Unit 7 · The Northern Interior</h2>
+<h3 id="weeks-2123-1-21-feb-2027">Weeks 21–23 · 1 – 21 Feb 2027</h3>
+<p>The demanding stretch, placed here on purpose — by February you’ll have the patience and the vocabulary for it. Bergman, Dreyer, Tarkovsky: films that are about faces, silence, doubt, and duration. Long, slow, and among the highest-value viewing on the list. If any unit is worth the extension film, it’s this one.</p>
+<p><strong>Week 21 · Feb 1–7</strong></p>
+<ul>
+<li><em>Wild Strawberries</em> (1957, Bergman) — the warmest entry point.</li>
+<li><em>The Seventh Seal</em> (1957, Bergman) — much funnier than its reputation.</li>
+<li><em>Optional:</em> <em>Winter Light</em> (1963, Bergman)</li>
+</ul>
+<p><strong>Week 22 · Feb 8–14</strong></p>
+<ul>
+<li><em>Persona</em> (1966, Bergman) — the film breaks, literally, in the middle. Two faces merge. Nobody has satisfactorily explained it and that’s fine.</li>
+<li><em>Ordet</em> (1955, Dreyer) — 126 min. The final scene is one of the few in cinema that genuinely cannot be described.</li>
+<li><em>Optional:</em> <em>Cries and Whispers</em> (1972, Bergman)</li>
+</ul>
+<p><strong>Week 23 · Feb 15–21</strong></p>
+<ul>
+<li><em>Stalker</em> (1979, Tarkovsky) — 161 min. Three men walk very slowly toward a room. It is either the most boring thing you’ve seen or it isn’t.</li>
+<li><em>Solaris</em> (1972, Tarkovsky) — 167 min. A long week; drop to one film if you need to and take <em>Stalker</em>.</li>
+<li><em>Optional:</em> <em>Andrei Rublev</em> (1966, Tarkovsky) — 205 min in the standard cut</li>
+</ul>
+<p><strong>Read:</strong> Tarkovsky, <em>Sculpting in Time</em> (excerpts); Criterion essay on <em>Ordet</em>.</p>
+<hr />
+<h2 id="syllabus-unit-8-new-hollywood">Unit 8 · New Hollywood</h2>
+<h3 id="weeks-2427-22-feb-21-mar-2027">Weeks 24–27 · 22 Feb – 21 Mar 2027</h3>
+<p>Reward for Unit 7, and not a lesser unit for it. American directors who had absorbed exactly the European films you just watched, handed studio money, briefly, before the blockbuster closed the window. You’ll now recognize the borrowings — the Antonioni in the drift, the Bertolucci in the light.</p>
+<p><strong>Week 24 · Feb 22–28</strong></p>
+<ul>
+<li><em>Bonnie and Clyde</em> (1967, Penn) — French New Wave technique smuggled into a studio picture. Truffaut and Godard were both approached to direct it.</li>
+<li><em>The Graduate</em> (1967, Nichols)</li>
+<li><em>Optional:</em> <em>The Wild Bunch</em> (1969, Peckinpah)</li>
+</ul>
+<p><strong>Week 25 · Mar 1–7</strong></p>
+<ul>
+<li><em>The Godfather</em> (1972, Coppola) — 175 min. Watch Gordon Willis’s lighting, having just seen <em>The Conformist</em>.</li>
+<li><em>Chinatown</em> (1974, Polanski) — noir rebuilt with everything Unit 2 taught you.</li>
+<li><em>Optional:</em> <em>The Godfather Part II</em> (1974, Coppola) — 202 min</li>
+</ul>
+<p><strong>Week 26 · Mar 8–14</strong></p>
+<ul>
+<li><em>Nashville</em> (1975, Altman) — 160 min. Twenty-four characters, overlapping sound, no center. The anti-<em>Godfather</em>.</li>
+<li><em>Taxi Driver</em> (1976, Scorsese)</li>
+<li><em>Optional:</em> <em>McCabe &amp; Mrs. Miller</em> (1971, Altman)</li>
+</ul>
+<p><strong>Week 27 · Mar 15–21</strong></p>
+<ul>
+<li><em>Days of Heaven</em> (1978, Malick) — shot almost entirely at magic hour. Nestor Almendros, twenty minutes of usable light a day.</li>
+<li><em>Apocalypse Now</em> (1979, Coppola) — 147 min (theatrical cut). The window closing.</li>
+<li><em>Optional:</em> <em>The Conversation</em> (1974, Coppola)</li>
+</ul>
+<p><strong>Read:</strong> Pauline Kael on <em>Nashville</em>; then Peter Biskind, <em>Easy Riders, Raging Bulls</em> (gossipy, fast, and genuinely useful context).</p>
+<hr />
+<h2 id="syllabus-unit-9-hong-kong-and-taiwan">Unit 9 · Hong Kong and Taiwan</h2>
+<h3 id="weeks-2830-22-mar-11-apr-2027">Weeks 28–30 · 22 Mar – 11 Apr 2027</h3>
+<p>The single most rewarding blind spot on your list. Wong Kar-wai and Edward Yang were making, in the 1990s, some of the best films anyone was making anywhere, and they’re barely taught outside film departments.</p>
+<p><strong>Week 28 · Mar 22–28 — Wong Kar-wai</strong></p>
+<ul>
+<li><em>Days of Being Wild</em> (1990, Wong)</li>
+<li><em>In the Mood for Love</em> (2000, Wong) — the film most often named the best of this century. Repetition, blocked sightlines, and a story told almost entirely in what’s withheld.</li>
+<li><em>Optional:</em> <em>Happy Together</em> (1997, Wong)</li>
+</ul>
+<p><strong>Week 29 · Mar 29 – Apr 4</strong></p>
+<ul>
+<li><em>Yi Yi</em> (2000, Yang) — 173 min. A family across three generations; possibly the most humane film on this syllabus.</li>
+<li><em>Hard Boiled</em> (1992, Woo) — the counterweight, and a reminder that this industry also produced the most kinetic action filmmaking on earth.</li>
+<li><em>Optional:</em> <em>A City of Sadness</em> (1989, Hou Hsiao-hsien)</li>
+</ul>
+<p><strong>Week 30 · Apr 5–11</strong></p>
+<ul>
+<li><em>A Brighter Summer Day</em> (1991, Yang) — 237 min. The week’s single assignment. Two nights, and worth every minute.</li>
+<li><em>Optional:</em> <em>Chungking Express</em> rewatch — you’ll see a completely different film than you did in Week 2</li>
+</ul>
+<p><strong>Read:</strong> Criterion essays on <em>In the Mood for Love</em> and <em>A Brighter Summer Day</em>; Bordwell’s <em>Planet Hong Kong</em> (excerpts).</p>
+<hr />
+<h2 id="syllabus-unit-10-off-the-usual-axis">Unit 10 · Off the Usual Axis</h2>
+<h3 id="weeks-3133-12-apr-2-may-2027">Weeks 31–33 · 12 Apr – 2 May 2027</h3>
+<p>India, Iran, Senegal. Traditions that developed largely outside the Hollywood/Europe conversation, and the correction to a canon that mostly wasn’t looking.</p>
+<p><strong>Week 31 · Apr 12–18 — Satyajit Ray</strong></p>
+<ul>
+<li><em>Pather Panchali</em> (1955, Ray) — 125 min. Shot on weekends over three years with a mostly amateur crew.</li>
+<li><em>Charulata</em> (1964, Ray)</li>
+<li><em>Optional:</em> <em>Aparajito</em> (1956, Ray)</li>
+</ul>
+<p><strong>Week 32 · Apr 19–25 — Iran</strong></p>
+<ul>
+<li><em>Close-Up</em> (1990, Kiarostami) — 98 min. A man impersonates a film director; Kiarostami films the trial and then restages it with the real people. The documentary/fiction boundary simply dissolves. You will have opinions about the epistemology.</li>
+<li><em>Taste of Cherry</em> (1997, Kiarostami)</li>
+<li><em>Optional:</em> <em>Where Is the Friend’s House?</em> (1987, Kiarostami)</li>
+</ul>
+<p><strong>Week 33 · Apr 26 – May 2 — Senegal</strong></p>
+<ul>
+<li><em>Black Girl</em> (1966, Sembène) — 60 min. Widely considered the first sub-Saharan African feature to reach international audiences.</li>
+<li><em>Touki Bouki</em> (1973, Mambéty) — 88 min. Formally wilder than almost anything in Unit 5.</li>
+<li><em>Optional:</em> <em>Xala</em> (1975, Sembène)</li>
+</ul>
+<p><strong>Read:</strong> Criterion’s essay on <em>Close-Up</em>; the <em>Black Girl</em> liner notes.</p>
+<hr />
+<h2 id="syllabus-unit-11-germany-and-the-political-film">Unit 11 · Germany and the Political Film</h2>
+<h3 id="weeks-3436-3-23-may-2027">Weeks 34–36 · 3 – 23 May 2027</h3>
+<p>Films that treat history as an unresolved argument. The New German Cinema directors were working directly against a national silence, and the political thrillers here were made close enough to their events to be dangerous.</p>
+<p><strong>Week 34 · May 3–9</strong></p>
+<ul>
+<li><em>Aguirre, the Wrath of God</em> (1972, Herzog) — 95 min, shot on a stolen camera in the Peruvian jungle. The production stories are true.</li>
+<li><em>Ali: Fear Eats the Soul</em> (1974, Fassbinder) — a remake of Sirk’s <em>All That Heaven Allows</em>, transposed to Munich and race.</li>
+<li><em>Optional:</em> <em>All That Heaven Allows</em> (1955, Sirk) — watch it <em>first</em> if you can</li>
+</ul>
+<p><strong>Week 35 · May 10–16</strong></p>
+<ul>
+<li><em>The Battle of Algiers</em> (1966, Pontecorvo) — 121 min. Shot documentary-style; the opening title card insists no newsreel footage was used, because viewers assumed otherwise.</li>
+<li><em>Z</em> (1969, Costa-Gavras)</li>
+<li><em>Optional:</em> <em>The Marriage of Maria Braun</em> (1979, Fassbinder)</li>
+</ul>
+<p><strong>Week 36 · May 17–23</strong></p>
+<ul>
+<li><em>Wings of Desire</em> (1987, Wenders) — Berlin from above, in monochrome, just before the wall came down.</li>
+<li><em>Night and Fog</em> (1956, Resnais) — <strong>32 min.</strong> The most-taught documentary in film curricula, and the one that established how the form handles atrocity: present-tense color tracking shots over the empty camps, cut against black-and-white archive. Watch it before <em>Come and See</em>, not after.</li>
+<li><em>Come and See</em> (1985, Klimov) — the hardest film on this syllabus by a wide margin, and unarguably a great one. Skip it if you’d rather; substitute <em>The Lives of Others</em> (2006, von Donnersmarck).</li>
+<li><em>Optional:</em> <em>Shoah</em> (1985, Lanzmann) — 566 min; a long-term project rather than a week’s viewing</li>
+</ul>
+<p><em>This is the heaviest week of the year emotionally, not in runtime. Give it space, and don’t stack it against a deadline.</em></p>
+<p><strong>Read:</strong> Criterion’s <em>Battle of Algiers</em> materials, including the notorious 2003 Pentagon screening.</p>
+<hr />
+<h2 id="syllabus-unit-12-cinema-now">Unit 12 · Cinema Now</h2>
+<h3 id="weeks-3739-24-may-13-jun-2027">Weeks 37–39 · 24 May – 13 Jun 2027</h3>
+<p>Post-1990, the canon still forming. You’ll now be able to see these as arguments with everything above rather than as standalone entertainments — which is the whole return on the previous nine months.</p>
+<p><strong>Week 37 · May 24–30</strong></p>
+<ul>
+<li><em>A Separation</em> (2011, Farhadi) — the best-constructed screenplay of its decade; no character is wrong.</li>
+<li><em>4 Months, 3 Weeks and 2 Days</em> (2007, Mungiu) — the Romanian New Wave long take at its most unbearable and most controlled.</li>
+<li><em>Optional:</em> <em>The Lives of Others</em> (2006, von Donnersmarck)</li>
+</ul>
+<p><strong>Week 38 · May 31 – Jun 6</strong></p>
+<ul>
+<li><em>Memories of Murder</em> (2003, Bong)</li>
+<li><em>Parasite</em> (2019, Bong) — watch them together and the sixteen-year throughline is obvious: the same director, the same class rage, vastly more control.</li>
+<li><em>Optional:</em> <em>Burning</em> (2018, Lee Chang-dong)</li>
+</ul>
+<p><strong>Week 39 · Jun 7–13</strong></p>
+<ul>
+<li><em>Spirited Away</em> (2001, Miyazaki)</li>
+<li><em>Portrait of a Lady on Fire</em> (2019, Sciamma) — a film about looking, made by someone who has clearly seen everything in Unit 4.</li>
+<li><em>Optional:</em> <em>Beau Travail</em> (1999, Denis)</li>
+</ul>
+<p><strong>Read:</strong> Sight &amp; Sound’s 2022 Greatest Films poll and the essays around it — useful now that you can argue with it.</p>
+<hr />
+<h2 id="syllabus-unit-13-capstone-cinema-as-pure-form">Unit 13 · Capstone — Cinema as Pure Form</h2>
+<h3 id="weeks-4042-14-jun-4-jul-2027">Weeks 40–42 · 14 Jun – 4 Jul 2027</h3>
+<p>Three weeks of films that are difficult only without context. You now have the context. This unit would have been miserable in September and should be exhilarating in June — which is itself the demonstration that the whole approach worked.</p>
+<p><strong>Week 40 · Jun 14–20</strong></p>
+<ul>
+<li><em>2001: A Space Odyssey</em> (1968, Kubrick) — 149 min.</li>
+<li><em>Playtime</em> (1967, Tati) — 124 min, shot in 70mm on a purpose-built city that bankrupted him. Two films from the same two years about human beings dwarfed by their own architecture.</li>
+<li><em>La Jetée</em> (1962, Marker) — <strong>28 min.</strong> Told almost entirely in still photographs: a film about time and memory that questions whether cinema needs motion at all. Sitting beside Kubrick’s vision of the future, it’s the better companion piece of the two.</li>
+<li><em>Optional:</em> <em>Solaris</em> rewatch, or <em>Stalker</em> if you skipped it</li>
+</ul>
+<p><strong>Week 41 · Jun 21–27</strong></p>
+<ul>
+<li><em>Mulholland Drive</em> (2001, Lynch)</li>
+<li><em>Persona</em> rewatch — the Bergman film Lynch is unmistakably working from. Forty minutes in, the connection is not subtle.</li>
+<li><em>Optional:</em> <em>Beau Travail</em> (1999, Denis)</li>
+</ul>
+<p><strong>Week 42 · Jun 28 – Jul 4</strong></p>
+<ul>
+<li><em>Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles</em> (1975, Akerman) — 201 min. A woman does housework in real time for three hours. Voted the greatest film ever made in the 2022 Sight &amp; Sound poll, to widespread outrage. The week’s single assignment, and the right film to end on: it will either vindicate the whole year or give you something to be productively furious about.</li>
+<li><em>Optional:</em> rewatch <em>Citizen Kane</em> from Week 1. It’s a good way to measure the distance.</li>
+</ul>
+<hr />
+<h2 id="syllabus-the-numbers">The numbers</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Weeks</td>
+<td>42 (plus a 3-week holiday break)</td>
+</tr>
+<tr class="even">
+<td>Core films</td>
+<td>85</td>
+</tr>
+<tr class="odd">
+<td>With extensions</td>
+<td>~127 (a few are rewatches)</td>
+</tr>
+<tr class="even">
+<td>Pace</td>
+<td>2–3 films/week</td>
+</tr>
+<tr class="odd">
+<td>Longest single week</td>
+<td><em>A Brighter Summer Day</em>, 237 min</td>
+</tr>
+<tr class="even">
+<td>Shortest core film</td>
+<td><em>Meshes of the Afternoon</em>, 14 min</td>
+</tr>
+<tr class="odd">
+<td>Weeks with 3+ core films</td>
+<td>4 (weeks 9, 10, 36, 40) — extras are all shorts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="syllabus-slack-built-in">Slack built in</h2>
+<p>Three weeks are single-film weeks by design (18, 30, 42). The holiday break is three weeks of nothing. Extensions are always optional. If you finish early, the extension list alone is another 40 films.</p>
+<p>The four weeks carrying an extra title (9, 10, 36, 40) add 104 minutes between them across the whole year — roughly one additional feature, spread over ten months. They exist to close two gaps that every academic film course treats as essential and this plan originally skipped entirely: <strong>German Expressionism</strong>, and <strong>non-narrative film</strong> (avant-garde and documentary). Four short films is a cheap price for both.</p>
+</section><section class="doc" id="doc-watch" data-doc="watch"><h1 class="doctitle">Where to Watch</h1><a class="pdflink" href="where-to-watch.pdf">Download PDF &#8599;</a>
+<p><strong>All 85 core films, US availability, checked 17 August 2026 via JustWatch.</strong></p>
+<hr />
+<h2 id="watch-the-headline">The headline</h2>
+<p><strong>50 of 85 core films (59%) are on the Criterion Channel right now.</strong> The other 35 break down as:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Where the other 35 live</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Free via Kanopy / Tubi / Plex / Hoopla</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>HBO Max (not on Criterion)</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Rental or purchase only</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Good news on the five additions:</strong> they cost nothing. <em>Meshes of the Afternoon</em>, <em>Night and Fog</em>, and <em>La Jetée</em> are all on Criterion. <em>The Cabinet of Dr. Caligari</em> and <em>Un Chien Andalou</em> are public domain in the US and free in half a dozen places. The rental budget below is unchanged.</p>
+<p><strong>The gaps are not where you’d expect.</strong> Criterion covers Units 6, 7, 9, and 10 — Japan, the Bergman/Dreyer/Tarkovsky stretch, Hong Kong/Taiwan, and India/Iran/Senegal — <strong>completely, 32 for 32.</strong> That is precisely the material that’s hard to find anywhere else, and it’s the strongest argument for the subscription.</p>
+<p>Where Criterion is thin is <strong>American studio cinema</strong>: Unit 2 (1 of 8) and Unit 8 (0 of 8). But those films are the easiest in the world to find — most are free on Kanopy or Tubi, and the rest rent for $3.99. So the coverage gap and the difficulty gap run in opposite directions, which is lucky.</p>
+<h2 id="watch-what-to-actually-subscribe-to">What to actually subscribe to</h2>
+<p><strong>Criterion Channel — yes, clearly.</strong> $10.99/mo. Carries 47 core films including every single film in four units.</p>
+<p><strong>A library card for Kanopy — yes, and it’s free.</strong> Kanopy alone covers 18 of the 33 Criterion gaps, including most of Unit 3 (silents) and a good chunk of Unit 8. Check whether Berkeley’s library login works, and whether your public library card does too — many people have access through both, and the borrowing limits are separate.</p>
+<p><strong>HBO Max — optional.</strong> It duplicates a lot of Criterion. It’s <em>uniquely</em> required for only four core films: <em>Singin’ in the Rain</em> (W7), <em>Spirited Away</em> (W39), <em>Portrait of a Lady on Fire</em> (W39), and <em>2001</em> (W40). All four are also rentable. Skip it, or subscribe for one month in June 2027.</p>
+<p><strong>Everything else: rent as you go.</strong> Budget roughly <strong>$45–55 in rentals for the whole year</strong> (about 12 films at $3.99). Cheaper than a second subscription.</p>
+<h2 id="watch-the-one-real-problem-film">The one real problem film</h2>
+<p><strong><em>Nashville</em> (1975), Week 26</strong> — no subscription, no free option, and no rental. Purchase only, about $4.99 digital. It has drifted in and out of streaming for years. Options: buy it, check the library for a physical copy, or substitute <em>McCabe &amp; Mrs. Miller</em> (the listed extension for that week, and a fine Altman in its own right).</p>
+<h2 id="watch-important-caveat">Important caveat</h2>
+<p><strong>The Criterion Channel rotates its catalogue monthly.</strong> These 47 are on today. Units 6 through 13 don’t come up until January–July 2027, so some will have cycled off and others cycled on by then. Re-check a month ahead of each unit. The rotation is usually generous in both directions — Criterion adds ~45 titles a month.</p>
+<hr />
+<h2 id="watch-by-unit">By unit</h2>
+<p>Legend: <strong>C</strong> = Criterion Channel · <strong>Free</strong> = Kanopy/Tubi/Plex/Hoopla/etc. · <strong>$</strong> = rental price</p>
+<h3 id="unit-1-the-grammar-weeks-13">Unit 1 · The Grammar (Weeks 1–3)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Citizen Kane (1941)</td>
+<td>—</td>
+<td>Rent $3.99 Apple/Amazon</td>
+</tr>
+<tr class="even">
+<td>Rear Window (1954)</td>
+<td>—</td>
+<td>TCM; rent $3.99</td>
+</tr>
+<tr class="odd">
+<td>Do the Right Thing (1989)</td>
+<td>—</td>
+<td>Free on YouTube (ads); rent $3.99</td>
+</tr>
+<tr class="even">
+<td>Chungking Express (1994)</td>
+<td>✓</td>
+<td>HBO Max, TCM</td>
+</tr>
+<tr class="odd">
+<td>Rashomon (1950)</td>
+<td>✓</td>
+<td>Free: Kanopy, Tubi, Plex</td>
+</tr>
+<tr class="even">
+<td>The 400 Blows (1959)</td>
+<td>✓</td>
+<td>Free: Kanopy, Tubi, Plex</td>
+</tr>
+</tbody>
+</table>
+<p><em>3 of 6 on Criterion. The three misses are all cheap rentals.</em></p>
+<p><em>Week 1’s extension, <strong>North by Northwest</strong> (1959), is not on Criterion but is <strong>free on Plex and Tubi</strong> — so taking the extension costs nothing.</em></p>
+<h3 id="unit-2-the-studio-system-weeks-47">Unit 2 · The Studio System (Weeks 4–7)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It Happened One Night (1934)</td>
+<td>—</td>
+<td><strong>Free: Tubi, Roku, YouTube</strong></td>
+</tr>
+<tr class="even">
+<td>His Girl Friday (1940)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla, Tubi, Pluto, Plex</strong></td>
+</tr>
+<tr class="odd">
+<td>Red River (1948)</td>
+<td>—</td>
+<td><strong>Free: Tubi, Hoopla, YouTube</strong></td>
+</tr>
+<tr class="even">
+<td>The Searchers (1956)</td>
+<td>✓</td>
+<td>YouTube TV</td>
+</tr>
+<tr class="odd">
+<td>Double Indemnity (1944)</td>
+<td>—</td>
+<td>MGM+, Philo; rent $3.99</td>
+</tr>
+<tr class="even">
+<td>The Third Man (1949)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Tubi, Plex</strong></td>
+</tr>
+<tr class="odd">
+<td>Singin’ in the Rain (1952)</td>
+<td>—</td>
+<td>HBO Max; rent $5.99</td>
+</tr>
+<tr class="even">
+<td>Sunset Boulevard (1950)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Criterion’s worst unit — 1 of 8 — and it barely matters. Five are free, one is a rental.</em></p>
+<h3 id="unit-3-silents-weeks-810">Unit 3 · Silents (Weeks 8–10)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sherlock Jr. (1924)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Tubi, Plex</strong></td>
+</tr>
+<tr class="even">
+<td>The General (1926)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla, Tubi, Roku, Plex</strong>; Prime Video</td>
+</tr>
+<tr class="odd">
+<td><strong>The Cabinet of Dr. Caligari (1920)</strong></td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla, Plex, Roku — public domain in the US</strong>; also Shudder, AMC+</td>
+</tr>
+<tr class="even">
+<td>Sunrise (1927)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla, Tubi, Roku</strong></td>
+</tr>
+<tr class="odd">
+<td>The Passion of Joan of Arc (1928)</td>
+<td>✓</td>
+<td>HBO Max; free: Tubi, Plex</td>
+</tr>
+<tr class="even">
+<td>Man with a Movie Camera (1929)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Tubi</strong></td>
+</tr>
+<tr class="odd">
+<td>Battleship Potemkin (1925)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Hoopla, Tubi, Plex</td>
+</tr>
+<tr class="even">
+<td><strong>Un Chien Andalou (1929)</strong></td>
+<td>—</td>
+<td><strong>Free: Kanopy, Tubi, Fandor — effectively public domain</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Meshes of the Afternoon (1943)</strong></td>
+<td>✓</td>
+<td>Free: Kanopy</td>
+</tr>
+</tbody>
+</table>
+<p><em>Every film in this unit is free somewhere. Zero cost for the whole unit — including all three additions.</em></p>
+<h3 id="unit-4-italy-weeks-1113">Unit 4 · Italy (Weeks 11–13)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rome, Open City (1945)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="even">
+<td>Bicycle Thieves (1948)</td>
+<td>✓</td>
+<td>HBO Max, Prime Video; free: Kanopy</td>
+</tr>
+<tr class="odd">
+<td>L’Avventura (1960)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="even">
+<td>Il Sorpasso (1962)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+<tr class="odd">
+<td>8½ (1963)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Tubi, Plex</td>
+</tr>
+<tr class="even">
+<td>The Conformist (1970)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>5 of 6. The miss is free on Kanopy.</em></p>
+<h3 id="unit-5-french-new-wave-weeks-1416">Unit 5 · French New Wave (Weeks 14–16)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bob le Flambeur (1956)</td>
+<td>—</td>
+<td><strong>Free: Kanopy</strong></td>
+</tr>
+<tr class="even">
+<td>Breathless (1960)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy</td>
+</tr>
+<tr class="odd">
+<td>Cléo from 5 to 7 (1962)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy</td>
+</tr>
+<tr class="even">
+<td>Jules and Jim (1962)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy</td>
+</tr>
+<tr class="odd">
+<td>Contempt (1963)</td>
+<td>—</td>
+<td><strong>Free: Tubi, Kanopy</strong> — no rental exists, so use these</td>
+</tr>
+<tr class="even">
+<td>Le Samouraï (1967)</td>
+<td>✓</td>
+<td>Prime Video, HBO Max; free: Kanopy, Tubi, Plex</td>
+</tr>
+</tbody>
+</table>
+<p><em>4 of 6, both misses free. Note that</em> Contempt <em>cannot be rented anywhere — Tubi or Kanopy is the only route.</em></p>
+<h3 id="unit-6-japan-weeks-1720-7-of-7-on-criterion">Unit 6 · Japan (Weeks 17–20) — <strong>7 of 7 on Criterion</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Late Spring (1949)</td>
+<td>✓</td>
+<td>HBO Max, Fandor</td>
+</tr>
+<tr class="even">
+<td>Tokyo Story (1953)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Plex</td>
+</tr>
+<tr class="odd">
+<td>Seven Samurai (1954)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Tubi, Plex</td>
+</tr>
+<tr class="even">
+<td>Ugetsu (1953)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Plex</td>
+</tr>
+<tr class="odd">
+<td>Harakiri (1962)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+<tr class="even">
+<td>High and Low (1963)</td>
+<td>✓</td>
+<td>HBO Max; free: Tubi, Plex</td>
+</tr>
+<tr class="odd">
+<td>Woman in the Dunes (1964)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit-7-the-northern-interior-weeks-2123-6-of-6-on-criterion">Unit 7 · The Northern Interior (Weeks 21–23) — <strong>6 of 6 on Criterion</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wild Strawberries (1957)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy</td>
+</tr>
+<tr class="even">
+<td>The Seventh Seal (1957)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Tubi, Plex</td>
+</tr>
+<tr class="odd">
+<td>Persona (1966)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="even">
+<td>Ordet (1955)</td>
+<td>✓</td>
+<td><strong>Criterion or Darkroom only — no rental exists</strong></td>
+</tr>
+<tr class="odd">
+<td>Stalker (1979)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="even">
+<td>Solaris (1972)</td>
+<td>✓</td>
+<td>HBO Max; free: Tubi, Plex</td>
+</tr>
+</tbody>
+</table>
+<p><em>Watch</em> Ordet <em>while Criterion has it — there is currently no way to rent it.</em></p>
+<h3 id="unit-8-new-hollywood-weeks-2427-0-of-8-on-criterion">Unit 8 · New Hollywood (Weeks 24–27) — <strong>0 of 8 on Criterion</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bonnie and Clyde (1967)</td>
+<td>—</td>
+<td>MGM+, Philo; rent $3.99</td>
+</tr>
+<tr class="even">
+<td>The Graduate (1967)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Tubi, Plex, Roku</strong>; Prime Video</td>
+</tr>
+<tr class="odd">
+<td>The Godfather (1972)</td>
+<td>—</td>
+<td>Paramount+, MGM+; rent $3.99</td>
+</tr>
+<tr class="even">
+<td>Chinatown (1974)</td>
+<td>—</td>
+<td>MGM+, Philo; rent $3.99</td>
+</tr>
+<tr class="odd">
+<td><strong>Nashville (1975)</strong></td>
+<td>—</td>
+<td><strong>Purchase only (~$4.99). See note above.</strong></td>
+</tr>
+<tr class="even">
+<td>Taxi Driver (1976)</td>
+<td>—</td>
+<td>Rent $3.99</td>
+</tr>
+<tr class="odd">
+<td>Days of Heaven (1978)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Hoopla, YouTube</strong></td>
+</tr>
+<tr class="even">
+<td>Apocalypse Now (1979)</td>
+<td>—</td>
+<td><strong>Free: Plex</strong>; Lionsgate+</td>
+</tr>
+</tbody>
+</table>
+<p><em>The most expensive unit. Two free, one purchase-only, five rentals — roughly $20 for the month, or free if you add MGM+ or Philo for one month (either covers Bonnie and Clyde, Chinatown, and Double Indemnity from Unit 2).</em></p>
+<h3 id="unit-9-hong-kong-taiwan-weeks-2830-5-of-5-on-criterion">Unit 9 · Hong Kong &amp; Taiwan (Weeks 28–30) — <strong>5 of 5 on Criterion</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Days of Being Wild (1990)</td>
+<td>✓</td>
+<td>HBO Max — <strong>no rental exists</strong></td>
+</tr>
+<tr class="even">
+<td>In the Mood for Love (2000)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="odd">
+<td>Yi Yi (2000)</td>
+<td>✓</td>
+<td>Criterion only (else rent $2.99)</td>
+</tr>
+<tr class="even">
+<td>Hard Boiled (1992)</td>
+<td>✓</td>
+<td>Free: Kanopy, Pluto, Plex</td>
+</tr>
+<tr class="odd">
+<td>A Brighter Summer Day (1991)</td>
+<td>✓</td>
+<td>Criterion only (else rent $2.99)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit-10-off-the-usual-axis-weeks-3133-6-of-6-on-criterion">Unit 10 · Off the Usual Axis (Weeks 31–33) — <strong>6 of 6 on Criterion</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pather Panchali (1955)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Plex, Tubi</td>
+</tr>
+<tr class="even">
+<td>Charulata (1964)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+<tr class="odd">
+<td>Close-Up (1990)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+<tr class="even">
+<td>Taste of Cherry (1997)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy — <strong>no rental exists</strong></td>
+</tr>
+<tr class="odd">
+<td>Black Girl (1966)</td>
+<td>✓</td>
+<td>HBO Max; free: Plex</td>
+</tr>
+<tr class="even">
+<td>Touki Bouki (1973)</td>
+<td>✓</td>
+<td>HBO Max, MUBI</td>
+</tr>
+</tbody>
+</table>
+<p><em>This unit is the clearest case for the subscription — several of these are genuinely hard to find otherwise.</em></p>
+<h3 id="unit-11-germany-the-political-film-weeks-3436">Unit 11 · Germany &amp; the Political Film (Weeks 34–36)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aguirre, the Wrath of God (1972)</td>
+<td>—</td>
+<td><strong>Free: Kanopy, Pluto, Plex, Tubi, YouTube</strong></td>
+</tr>
+<tr class="even">
+<td>Ali: Fear Eats the Soul (1974)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="odd">
+<td>The Battle of Algiers (1966)</td>
+<td>✓</td>
+<td>HBO Max; free: Kanopy, Plex, Tubi</td>
+</tr>
+<tr class="even">
+<td>Z (1969)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="odd">
+<td>Wings of Desire (1987)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+<tr class="even">
+<td><strong>Night and Fog (1956)</strong></td>
+<td>✓</td>
+<td>HBO Max; rent $2.99</td>
+</tr>
+<tr class="odd">
+<td>Come and See (1985)</td>
+<td>✓</td>
+<td>Criterion only (else rent $3.99)</td>
+</tr>
+</tbody>
+</table>
+<p><em>6 of 7, and</em> Aguirre <em>is free in five places.</em></p>
+<h3 id="unit-12-cinema-now-weeks-3739">Unit 12 · Cinema Now (Weeks 37–39)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A Separation (2011)</td>
+<td>—</td>
+<td>Hulu; rent $3.99</td>
+</tr>
+<tr class="even">
+<td>4 Months, 3 Weeks and 2 Days (2007)</td>
+<td>✓</td>
+<td>Philo, AMC+</td>
+</tr>
+<tr class="odd">
+<td>Memories of Murder (2003)</td>
+<td>—</td>
+<td>Rent $3.99 — no subscription or free option</td>
+</tr>
+<tr class="even">
+<td>Parasite (2019)</td>
+<td>—</td>
+<td><strong>Free: Kanopy</strong>; rent $0.99</td>
+</tr>
+<tr class="odd">
+<td>Spirited Away (2001)</td>
+<td>—</td>
+<td>HBO Max; rent $3.59</td>
+</tr>
+<tr class="even">
+<td>Portrait of a Lady on Fire (2019)</td>
+<td>—</td>
+<td>HBO Max; <strong>free: Kanopy</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Criterion’s weakest recent-cinema showing — 1 of 6 — but everything here is easy to get.</em></p>
+<h3 id="unit-13-capstone-weeks-4042">Unit 13 · Capstone (Weeks 40–42)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>C</th>
+<th>Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2001: A Space Odyssey (1968)</td>
+<td>—</td>
+<td>HBO Max, TCM; rent $3.99</td>
+</tr>
+<tr class="even">
+<td>Playtime (1967)</td>
+<td>✓</td>
+<td>Free: Kanopy</td>
+</tr>
+<tr class="odd">
+<td><strong>La Jetée (1962)</strong></td>
+<td>✓</td>
+<td>Criterion only (else rent $2.99 Apple)</td>
+</tr>
+<tr class="even">
+<td>Mulholland Drive (2001)</td>
+<td>—</td>
+<td>Rent $3.99 — no subscription or free option</td>
+</tr>
+<tr class="odd">
+<td>Jeanne Dielman (1975)</td>
+<td>✓</td>
+<td>HBO Max</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="watch-rental-shopping-list">Rental shopping list</h2>
+<p>If you take Criterion + Kanopy and rent the rest, this is the full year’s out-of-pocket:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Film</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Citizen Kane</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Rear Window</td>
+<td>$3.99</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Double Indemnity</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Singin’ in the Rain</td>
+<td>$5.99</td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td>Bonnie and Clyde</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>The Godfather</td>
+<td>$3.99</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>Chinatown</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td><strong>Nashville</strong></td>
+<td>~$4.99 (purchase)</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>Taxi Driver</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>37</td>
+<td>A Separation</td>
+<td>$3.99</td>
+</tr>
+<tr class="odd">
+<td>38</td>
+<td>Memories of Murder</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>39</td>
+<td>Spirited Away</td>
+<td>$3.59</td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>2001: A Space Odyssey</td>
+<td>$3.99</td>
+</tr>
+<tr class="even">
+<td>41</td>
+<td>Mulholland Drive</td>
+<td>$3.99</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>~$57</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Adding one month of MGM+ during Unit 8 (February–March 2027) covers <em>Bonnie and Clyde</em>, <em>Chinatown</em>, and <em>Double Indemnity</em>, saving about $12 on a ~$6 subscription. Adding one month of HBO Max in June 2027 covers <em>2001</em> and <em>Spirited Away</em>.</p>
+<p>Realistically: <strong>~$130 for the year</strong> all in (Criterion at $10.99 × 11 months, plus ~$45 in rentals after the substitutions above), assuming Kanopy is free through your library.</p>
+<hr />
+<p><em>Availability verified against JustWatch US on 17 August 2026, covering all 85 core films including the five later additions (Caligari, Un Chien Andalou, Meshes of the Afternoon, Night and Fog, La Jetée). Streaming rights change constantly; re-check each unit about a month before you start it.</em></p>
+</section><section class="doc" id="doc-comparison" data-doc="comparison"><h1 class="doctitle">Comparison</h1><a class="pdflink" href="syllabus-comparison.pdf">Download PDF &#8599;</a>
+<p><strong>Eleven publicly posted university syllabi with complete screening lists — 194 total screenings, 147 distinct films — set against the 80-film sabbatical plan.</strong></p>
+<hr />
+<h2 id="comparison-the-eleven-courses">The eleven courses</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Course</th>
+<th>Institution</th>
+<th>Films</th>
+<th>Type</th>
+<th>Textbook</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://ocw.mit.edu/courses/21l-011-the-film-experience-fall-2013/pages/films-readings/films-readings/">21L.011 The Film Experience</a></td>
+<td>MIT (Thorburn)</td>
+<td>22</td>
+<td>Chronological + genre</td>
+<td>Cook, <em>A History of Narrative Film</em></td>
+</tr>
+<tr class="even">
+<td><a href="https://ocw.mit.edu/courses/21l-706-studies-in-film-fall-2005/pages/readings/">21L.706 Studies in Film</a></td>
+<td>MIT (Kibel)</td>
+<td>11</td>
+<td>Film paired with literature</td>
+<td>— (literary texts)</td>
+</tr>
+<tr class="odd">
+<td><a href="https://class-tools.app.utah.edu/syllabus/1258/18406/FILM+2110+-+History+of+Film+and+Media+Arts,+Origins+to+1952+Syllabus+PDF.pdf">FILM 2110 History to 1952</a></td>
+<td>Utah (McEnteggart)</td>
+<td>15</td>
+<td>Strict chronology by movement</td>
+<td>Cook</td>
+</tr>
+<tr class="even">
+<td><a href="https://intermittentmechanism.blog/wp-content/uploads/2020/08/jones-ian-bryce-sample-syllabus-history-of-cinema-1895-1945.pdf">MCS 207 History of Cinema I</a></td>
+<td>DePaul (Jones)</td>
+<td>10</td>
+<td>Chronology + race/avant-garde</td>
+<td>— (PDF readings)</td>
+</tr>
+<tr class="odd">
+<td><a href="https://s3.amazonaws.com/mirror.facultyinfo.unt.edu/tjs0119/schteach/3475%20Syllabus%20(Spring%202019)-1.pdf">MRTS 3475 Film History from 1945</a></td>
+<td>UNT (Sutton)</td>
+<td>11</td>
+<td>Chronological by region</td>
+<td>Thompson &amp; Bordwell, <em>Film History</em></td>
+</tr>
+<tr class="even">
+<td><a href="https://people.uncw.edu/berlinert/teaching/documents/FST200syllabus_001.pdf">FST 200 Intro to Film Study</a></td>
+<td>UNC Wilmington (Berliner)</td>
+<td>23</td>
+<td>Formal concepts</td>
+<td>Bordwell &amp; Thompson, <em>Film Art</em></td>
+</tr>
+<tr class="odd">
+<td><a href="https://english.ufl.edu/wp-content/uploads/sites/45/ENG_2300_7308_TRobinson.pdf">ENG 2300 Film Analysis</a></td>
+<td>Florida (Robinson)</td>
+<td>15</td>
+<td>Formal concepts + theory</td>
+<td><em>Film Art</em> + Corrigan</td>
+</tr>
+<tr class="even">
+<td><a href="http://individual.utoronto.ca/keil/Documents/Syllabus.pdf">INI 115Y Intro to Film Study</a></td>
+<td>Toronto (Keil)</td>
+<td>39</td>
+<td>Formal concepts, full year</td>
+<td><em>Film Art</em></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.academia.edu/37315027/Course_Syllabus_International_Cinema_">FI 224G International Cinema</a></td>
+<td>Eckerd (Kunze)</td>
+<td>13</td>
+<td>One film per national movement</td>
+<td>Nowell-Smith, <em>Oxford History</em></td>
+</tr>
+<tr class="even">
+<td><a href="https://complit.ucdavis.edu/sites/g/files/dgvnsk5491/files/inline-files/com_210-world_cinema_fall_2010_lu.pdf">COM 210 World Cinema</a></td>
+<td>UC Davis (Lu)</td>
+<td>26</td>
+<td>Theory + national case studies</td>
+<td>— (course reader)</td>
+</tr>
+<tr class="odd">
+<td><a href="https://uh.edu/class/oet/emerging-trends/_assets/2016/kleinheider_wcl2352_summer2015.pdf">WCL 2352 Intro to World Cinema</a></td>
+<td>Houston (Kleinheider)</td>
+<td>9</td>
+<td>Thematic (“Crossing Borders”)</td>
+<td>Corrigan</td>
+</tr>
+</tbody>
+</table>
+<p>Also worth a look, though I didn’t score them: <a href="https://film21200.commons.gc.cuny.edu/sessions/">Hunter College FILM 21200</a>, a deliberately revisionist post-1945 survey with a full public course site, and the <a href="https://afvs.fas.harvard.edu/resource/film-and-visual-studies-handbook">Harvard Film &amp; Visual Studies PhD viewing list</a>, which is a canon rather than a course.</p>
+<hr />
+<h2 id="comparison-three-species-of-course">Three species of course</h2>
+<p>The eleven sort cleanly into three types, and they are not doing the same thing at all.</p>
+<p><strong>1. The chronological history survey</strong> (Utah, DePaul, UNT, MIT 21L.011). Marches through periods in order, one film per movement, tethered to a textbook — Cook or Thompson &amp; Bordwell. Usually split into two semesters at 1945. The film is an <em>example of a period</em>; you watch one Neorealist film, not three.</p>
+<p><strong>2. The formal-concepts analysis course</strong> (UNC Wilmington, Florida, Toronto). Organized by technique — mise-en-scène, then cinematography, then editing, then sound — with films chosen to demonstrate the technique regardless of era. Almost universally assigns Bordwell &amp; Thompson’s <em>Film Art</em>. Jumps freely from 1924 to 2001 in a single week.</p>
+<p><strong>3. The world-cinema survey</strong> (Eckerd, UC Davis, Houston). One film per national tradition, explicitly framed against Hollywood as the default. Eckerd’s course contains <em>zero</em> US films, by design.</p>
+<p><strong>The sabbatical plan is a fourth thing.</strong> It’s closest to type 3 in content and type 2 in Unit 1, but its organizing bet — 3–4 films inside one director or movement so that style becomes legible through repetition — is something <strong>none of these eleven courses does.</strong> They can’t: a 15-week term with one screening slot can’t spend four weeks on Bergman. That constraint is exactly what a sabbatical removes.</p>
+<hr />
+<h2 id="comparison-scale">Scale</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Films</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Median academic course</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>Largest (Toronto, full year)</td>
+<td>39</td>
+</tr>
+<tr class="odd">
+<td><strong>The plan</strong></td>
+<td><strong>80 core / ~123 with extensions</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The plan is roughly <strong>five courses’ worth of screenings</strong> — closer to an undergraduate concentration than to any single class. Worth knowing, mostly as reassurance that the pacing isn’t casual.</p>
+<hr />
+<h2 id="comparison-where-the-canons-agree">Where the canons agree</h2>
+<p>Films appearing in <strong>3 or more</strong> of the eleven syllabi — the hard consensus core:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Film</th>
+<th>Syllabi</th>
+<th>In the plan?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The General (1926)</td>
+<td>4</td>
+<td>✓ Week 8</td>
+</tr>
+<tr class="even">
+<td>Singin’ in the Rain (1952)</td>
+<td>4</td>
+<td>✓ Week 7</td>
+</tr>
+<tr class="odd">
+<td>Citizen Kane (1941)</td>
+<td>4</td>
+<td>✓ Week 1</td>
+</tr>
+<tr class="even">
+<td><strong>Meshes of the Afternoon (1943)</strong></td>
+<td>4</td>
+<td>✗</td>
+</tr>
+<tr class="odd">
+<td>His Girl Friday (1940)</td>
+<td>3</td>
+<td>✓ Week 4</td>
+</tr>
+<tr class="even">
+<td>Bicycle Thieves (1948)</td>
+<td>3</td>
+<td>✓ Week 11</td>
+</tr>
+<tr class="odd">
+<td>Rashomon (1950)</td>
+<td>3</td>
+<td>✓ Week 3</td>
+</tr>
+<tr class="even">
+<td><strong>The Cabinet of Dr. Caligari (1920)</strong></td>
+<td>3</td>
+<td>✗</td>
+</tr>
+<tr class="odd">
+<td>Battleship Potemkin (1925)</td>
+<td>3</td>
+<td>✓ Week 10</td>
+</tr>
+<tr class="even">
+<td><strong>The Celebration (1998)</strong></td>
+<td>3</td>
+<td>✗</td>
+</tr>
+<tr class="odd">
+<td><strong>North by Northwest (1959)</strong></td>
+<td>3</td>
+<td>✗</td>
+</tr>
+<tr class="even">
+<td><strong>Metropolis (1927)</strong></td>
+<td>3</td>
+<td>✗ (listed as an extension)</td>
+</tr>
+<tr class="odd">
+<td>Tokyo Story (1953)</td>
+<td>3</td>
+<td>✓ Week 17</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The plan has 8 of the 13.</strong> That’s a good hit rate on the true canon.</p>
+<hr />
+<h2 id="comparison-where-they-diverge-the-honest-finding">Where they diverge — the honest finding</h2>
+<p><strong>Only 35 of the plan’s 80 films appear in <em>any</em> of the eleven syllabi.</strong> 45 appear in none.</p>
+<p>That sounds damning and mostly isn’t. It’s an artifact of the depth strategy: these courses screen one Kurosawa, and the plan screens four. <em>Seven Samurai</em> shows up in the syllabi; <em>Ugetsu</em>, <em>Harakiri</em>, <em>High and Low</em>, and <em>Woman in the Dunes</em> don’t. Same for Bergman (they screen <em>Persona</em>; the plan adds three more), Wong Kar-wai, Antonioni, Fellini, Tarkovsky, and all of New Hollywood.</p>
+<p>So the divergence is largely <em>deliberate and defensible</em>. But three gaps are not.</p>
+<h3 id="gap-1-avant-garde-and-experimental-film-15-titles-across-the-syllabi-zero-in-the-plan">Gap 1 — Avant-garde and experimental film: 15 titles across the syllabi, zero in the plan</h3>
+<p>This is the biggest real omission. Nearly every formal-analysis course devotes a full unit to it: <em>Meshes of the Afternoon</em> (4 syllabi), <em>Un Chien Andalou</em>, <em>Ballet mécanique</em>, <em>Mothlight</em>, <em>Kustom Kar Kommandos</em>, <em>Scorpio Rising</em>, <em>A Movie</em>, <em>La Jetée</em>. These are taught because they isolate what narrative films do invisibly — and most are <strong>under 30 minutes</strong>, so the cost of adding them is trivial.</p>
+<h3 id="gap-2-documentary-9-titles-across-the-syllabi-zero-in-the-plan">Gap 2 — Documentary: 9 titles across the syllabi, zero in the plan</h3>
+<p><em>Night and Fog</em> (32 min), <em>Land Without Bread</em>, <em>Triumph of the Will</em>, <em>The Hour of the Furnaces</em>, <em>Dark Days</em>. The plan treats “film” as “narrative feature” throughout, which is a real narrowing.</p>
+<h3 id="gap-3-early-cinema-and-german-expressionism">Gap 3 — Early cinema and German Expressionism</h3>
+<p>The plan starts in 1924 with Keaton. The syllabi spend <strong>19% of screenings pre-1930</strong> against the plan’s 8%, and they all begin with Lumière/Méliès/Porter shorts — <em>The Great Train Robbery</em>, <em>A Trip to the Moon</em>. More pointedly, <strong>German Expressionism is missing entirely from the plan’s core</strong>: <em>Caligari</em> is in 3 syllabi, <em>Metropolis</em> in 3, <em>Nosferatu</em> and <em>The Last Laugh</em> in one each. The plan has Murnau’s <em>Sunrise</em>, which is a Hollywood film.</p>
+<p>Taken together, non-narrative and pre-1915 material is <strong>24% of everything the eleven courses screen</strong> and <strong>0% of the plan.</strong></p>
+<h3 id="chronological-weight-side-by-side">Chronological weight, side by side</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>The plan</th>
+<th>The 11 syllabi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pre-1930</td>
+<td>8%</td>
+<td>19%</td>
+</tr>
+<tr class="even">
+<td>1930–45</td>
+<td>6%</td>
+<td>16%</td>
+</tr>
+<tr class="odd">
+<td>1946–59</td>
+<td>22%</td>
+<td>21%</td>
+</tr>
+<tr class="even">
+<td><strong>1960–79</strong></td>
+<td><strong>41%</strong></td>
+<td><strong>18%</strong></td>
+</tr>
+<tr class="odd">
+<td>1980–94</td>
+<td>10%</td>
+<td>9%</td>
+</tr>
+<tr class="even">
+<td>1995+</td>
+<td>12%</td>
+<td>17%</td>
+</tr>
+</tbody>
+</table>
+<p>The plan is bulged hard at 1960–79 — New Hollywood, the New Waves, Tarkovsky, the Japanese peak. That’s a defensible taste (it’s arguably the richest twenty years in the medium), but it’s twice the academic weighting, and it’s paid for out of the 1920s–40s.</p>
+<h3 id="where-the-plan-is-ahead-of-the-academic-courses">Where the plan is <em>ahead</em> of the academic courses</h3>
+<p>Worth saying: on <strong>Asian cinema the plan is substantially deeper than any of the eleven.</strong> Yang’s <em>A Brighter Summer Day</em> and <em>Yi Yi</em>, Kobayashi’s <em>Harakiri</em>, Wong’s <em>Days of Being Wild</em>, Hou — none appear in any syllabus here. Same for the Iranian and Senegalese units beyond the two obligatory titles. Several of these courses handle “world cinema” with a single film per continent.</p>
+<hr />
+<h2 id="comparison-what-id-actually-change">What I’d actually change</h2>
+<p>Five suggestions, roughly in order of payoff. All are cheap — mostly short films slotted into existing weeks.</p>
+<ol type="1">
+<li><p><strong>Add <em>Meshes of the Afternoon</em> (14 min) and <em>Un Chien Andalou</em> (16 min) to Week 10</strong>, alongside <em>Man with a Movie Camera</em>. That week is already about non-narrative form; it becomes an avant-garde unit for 30 extra minutes.</p></li>
+<li><p><strong>Add <em>The Cabinet of Dr. Caligari</em> (1920) to Week 9</strong>, replacing or joining <em>The Passion of Joan of Arc</em>. This fixes the German Expressionism hole, and Expressionist lighting is the thing Unit 2’s noir week is descended from — it makes Week 6 land harder.</p></li>
+<li><p><strong>Add <em>Night and Fog</em> (32 min) to Week 36</strong>, next to <em>Come and See</em>. Documentary enters the plan in the one unit where it belongs thematically, and it’s the most-taught documentary in the sample.</p></li>
+<li><p><strong>Add <em>La Jetée</em> (28 min) to Week 40</strong>, with <em>2001</em> and <em>Playtime</em>. It’s in 2 syllabi, it’s 28 minutes, and a photo-roman about time and memory sitting beside Kubrick is a genuinely good pairing.</p></li>
+<li><p><strong>Consider swapping in <em>North by Northwest</em> for <em>Rear Window</em> in Week 1</strong>, or adding it. Hitchcock appears across these syllabi more than any other director, and <em>North by Northwest</em> is the one they teach for formal analysis — the crop-duster sequence is the standard editing example.</p></li>
+</ol>
+<p>Items 1–4 add about <strong>90 minutes of total runtime</strong> across the year and close the two structural gaps. That’s the whole fix.</p>
+<hr />
+<p><em>Sources: the eleven syllabi linked in the table above. Overlap figures computed by title-normalized intersection across 194 screenings, 17 August 2026.</em></p>
+</section></div></main>
+</div>
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+const docs=[...document.querySelectorAll('.doc')];
+const groups=[...document.querySelectorAll('.navgroup')];
+function show(k){
+  tabs.forEach(t=>t.classList.toggle('active',t.dataset.doc===k));
+  docs.forEach(d=>d.classList.toggle('show',d.dataset.doc===k));
+  groups.forEach(g=>g.classList.toggle('show',g.dataset.doc===k));
+  document.querySelector('aside').scrollTop=0;
+  window.scrollTo(0,0);
+  try{localStorage.setItem('sf-doc',k)}catch(e){}
+}
+tabs.forEach(t=>t.onclick=()=>show(t.dataset.doc));
+// deep links: switch to whichever doc owns the target section
+document.querySelectorAll('.navlink').forEach(a=>{
+  a.onclick=e=>{const g=a.closest('.navgroup'); if(g) show(g.dataset.doc);};
+});
+let start='syllabus';
+try{const s=localStorage.getItem('sf-doc'); if(s&&document.getElementById('doc-'+s))start=s;}catch(e){}
+if(location.hash){const el=document.querySelector(location.hash);
+  const d=el&&el.closest('.doc'); if(d)start=d.dataset.doc;}
+show(start);
+if(location.hash){const el=document.querySelector(location.hash); if(el)setTimeout(()=>el.scrollIntoView(),60);}
+// highlight nav on scroll
+const heads=[...document.querySelectorAll('h2[id]')];
+const io=new IntersectionObserver(es=>{
+  es.forEach(en=>{ if(!en.isIntersecting) return;
+    document.querySelectorAll('.navlink.current').forEach(n=>n.classList.remove('current'));
+    const l=document.querySelector('.navlink[href="#'+CSS.escape(en.target.id)+'"]');
+    if(l){l.classList.add('current');}
+  });
+},{rootMargin:'-10% 0px -80% 0px'});
+heads.forEach(h=>io.observe(h));
+</script>
+</body></html>

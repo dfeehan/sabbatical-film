@@ -1,0 +1,62 @@
+% ---- fonts ----
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}[Scale=0.92]
+\newfontfamily\symbolfont{DejaVu Sans}
+\usepackage{newunicodechar}
+\newunicodechar{✓}{{\symbolfont ✓}}
+\newunicodechar{✗}{{\symbolfont ✗}}
+\newunicodechar{★}{{\symbolfont ★}}
+\newunicodechar{·}{\textperiodcentered}
+
+% ---- page ----
+\usepackage[letterpaper,margin=1in,top=1.05in,bottom=1.05in,headheight=15pt]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{7A2E2E}
+\definecolor{muted}{HTML}{6B6B6B}
+\definecolor{rule}{HTML}{D8D2C8}
+\color{ink}
+
+% ---- headers/footers ----
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{rule}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}A Sabbatical in Film}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}\nouppercase{\firstmark}}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}}
+
+% ---- headings ----
+\usepackage{titlesec}
+\titleformat{\section}[display]
+  {\sffamily\Large\bfseries\color{accent}}
+  {\sffamily\footnotesize\bfseries\color{muted}\MakeUppercase{\thesection}}
+  {0.4em}{}[{\color{rule}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{2.2em plus .4em minus .2em}{1.1em}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{ink}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{1.3em}{0.5em}
+\titleformat{\subsubsection}{\sffamily\small\bfseries\color{muted}}{}{0em}{}
+
+% ---- lists & spacing ----
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.35em,topsep=0.5em,parsep=0pt}
+\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}
+\linespread{1.06}
+
+% ---- tables ----
+\usepackage{booktabs,longtable,array}
+\renewcommand{\arraystretch}{1.25}
+\AtBeginEnvironment{longtable}{\sffamily\small}
+\usepackage{etoolbox}
+
+% ---- blockquote as a note ----
+\renewenvironment{quote}
+  {\begin{list}{}{\leftmargin=1em\rightmargin=1em}\item[]\itshape\color{muted}\small}
+  {\end{list}}
+
+% ---- links ----
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent}
+\urlstyle{same}

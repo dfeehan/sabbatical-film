@@ -23,6 +23,25 @@ short film (14–32 min) to cover avant-garde and documentary work.
 | [`syllabus-comparison.md`](syllabus-comparison.md) | How this plan compares to eleven real university film syllabi (194 screenings, 147 distinct films), with the overlap analysis that produced the final round of additions. |
 | `notes/` | Viewing notes go here. |
 
+### Generated formats
+
+| File | What it is |
+|---|---|
+| [`index.html`](index.html) | **Browsable version.** All three documents in one self-contained page with a sidebar for jumping between units. Open it in any browser — no server needed. Works offline, respects dark mode, prints cleanly. |
+| `sabbatical-film-syllabus.pdf` | The syllabus, typeset (14 pp., letter). |
+| `where-to-watch.pdf` | Availability guide, typeset (8 pp.). |
+| `syllabus-comparison.pdf` | Comparison, typeset (5 pp.). |
+| `build/` | Scripts that regenerate the HTML and PDFs from the Markdown. |
+
+The Markdown files are the source of truth. After editing any of them, run:
+
+```bash
+./build/build.sh
+```
+
+which rebuilds all four generated files. Requires `pandoc`, `xelatex`
+(`brew install pandoc` and MacTeX or `brew install --cask basictex`), and `python3`.
+
 ## The units
 
 | # | Unit | Weeks | Dates |
