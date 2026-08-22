@@ -16,7 +16,7 @@ Films are grouped into **13 units of 3–4 weeks**. Within a unit, the films tal
 
 1. **One film per sitting, no phone.** These were built for uninterrupted attention and collapse without it.
 2. **Write 3–4 sentences after each one** — before you read anything about it. What did the camera do? What surprised you? What annoyed you? You know better than most that unrecorded observation evaporates.
-3. **Read the criticism *after*, never before.** One piece, ten minutes. Sources listed per unit.
+3. **Read the criticism *after*, never before.** One piece, ten minutes. Unit-level reading is listed below; the [Reading Companion](reading-companion.md) has linked essays for every individual film.
 
 **Where to find these:** the Criterion Channel covers a large majority of this list and is the single best subscription for the project. MUBI, Kanopy (free with most university logins — check Berkeley's), and your library fill most of the rest.
 
@@ -51,6 +51,8 @@ Six films chosen because each one makes a formal technique impossible to miss. W
 
 **Read:** Roger Ebert's *Great Movies* essay on *Citizen Kane*; Bordwell & Thompson chs. 4–6.
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-1--the-grammar) in the Reading Companion.
+
 ---
 
 ## Unit 2 · The Studio System
@@ -83,6 +85,8 @@ Classical Hollywood at full operating efficiency. These are, without qualificati
 - *Optional:* *The Bad and the Beautiful* (1952, Minnelli)
 
 **Read:** Manny Farber, "Underground Films" (1957) — his case for Hawks, Walsh, and Mann as unpretentious craftsmen, and against exactly the prestige-Ford register of *The Searchers*. Useful precisely because it argues with this week's assignments.
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-2--the-studio-system) in the Reading Companion.
 
 ---
 
@@ -118,6 +122,8 @@ Weeks 9 and 10 carry an extra title each. Week 9 adds German Expressionism, whic
 
 **Read:** David Bordwell's blog, "Sherlock Jr." posts; Eisenstein's short essay "A Dialectic Approach to Film Form" (skim — the theory is dense, the examples are clear).
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-3--silents-the-short-version) in the Reading Companion.
+
 ---
 
 ## Unit 4 · Italy: Rubble to Ennui
@@ -145,6 +151,8 @@ Postwar Italian cinema runs an arc in fifteen years from filming actual bombed s
 
 **Read:** Criterion's essays on *L'Avventura* and *8½*.
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-4--italy-rubble-to-ennui) in the Reading Companion.
+
 ---
 
 ## Unit 5 · The French New Wave and What It Stole
@@ -171,6 +179,8 @@ The trick with the New Wave is that it's usually taught as a rupture. It's more 
 - *Optional:* *Pierrot le Fou* (1965, Godard)
 
 **Read:** Truffaut, "A Certain Tendency of the French Cinema" (1954) — the manifesto, and short.
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-5--the-french-new-wave-and-what-it-stole) in the Reading Companion.
 
 *(Holiday break: Dec 14 – Jan 3. Watch whatever you like, or nothing.)*
 
@@ -206,6 +216,8 @@ The deepest single national tradition on this list and the biggest single gap fo
 
 **Read:** Bordwell on Ozu (his blog has years of it); Criterion's *Tokyo Story* essay.
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-6--japan) in the Reading Companion.
+
 ---
 
 ## Unit 7 · The Northern Interior
@@ -232,6 +244,8 @@ The demanding stretch, placed here on purpose — by February you'll have the pa
 - *Optional:* *Andrei Rublev* (1966, Tarkovsky) — 205 min in the standard cut
 
 **Read:** Tarkovsky, *Sculpting in Time* (excerpts); Criterion essay on *Ordet*.
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-7--the-northern-interior) in the Reading Companion.
 
 ---
 
@@ -266,6 +280,8 @@ Reward for Unit 7, and not a lesser unit for it. American directors who had abso
 
 **Read:** Pauline Kael on *Nashville*; then Peter Biskind, *Easy Riders, Raging Bulls* (gossipy, fast, and genuinely useful context).
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-8--new-hollywood) in the Reading Companion.
+
 ---
 
 ## Unit 9 · Hong Kong and Taiwan
@@ -291,6 +307,8 @@ The single most rewarding blind spot on your list. Wong Kar-wai and Edward Yang 
 - *Optional:* *Chungking Express* rewatch — you'll see a completely different film than you did in Week 2
 
 **Read:** Criterion essays on *In the Mood for Love* and *A Brighter Summer Day*; Bordwell's *Planet Hong Kong* (excerpts).
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-9--hong-kong-and-taiwan) in the Reading Companion.
 
 ---
 
@@ -318,6 +336,8 @@ India, Iran, Senegal. Traditions that developed largely outside the Hollywood/Eu
 - *Optional:* *Xala* (1975, Sembène)
 
 **Read:** Criterion's essay on *Close-Up*; the *Black Girl* liner notes.
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-10--off-the-usual-axis) in the Reading Companion.
 
 ---
 
@@ -349,6 +369,8 @@ Films that treat history as an unresolved argument. The New German Cinema direct
 
 **Read:** Criterion's *Battle of Algiers* materials, including the notorious 2003 Pentagon screening.
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-11--germany-and-the-political-film) in the Reading Companion.
+
 ---
 
 ## Unit 12 · Cinema Now
@@ -376,6 +398,8 @@ Post-1990, the canon still forming. You'll now be able to see these as arguments
 
 **Read:** Sight & Sound's 2022 Greatest Films poll and the essays around it — useful now that you can argue with it.
 
+**After each film:** [essay links for this unit](reading-companion.md#unit-12--cinema-now) in the Reading Companion.
+
 ---
 
 ## Unit 13 · Capstone — Cinema as Pure Form
@@ -400,6 +424,8 @@ Three weeks of films that are difficult only without context. You now have the c
 
 - *Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles* (1975, Akerman) — 201 min. A woman does housework in real time for three hours. Voted the greatest film ever made in the 2022 Sight & Sound poll, to widespread outrage. The week's single assignment, and the right film to end on: it will either vindicate the whole year or give you something to be productively furious about.
 - *Optional:* rewatch *Citizen Kane* from Week 1. It's a good way to measure the distance.
+
+**After each film:** [essay links for this unit](reading-companion.md#unit-13--capstone--cinema-as-pure-form) in the Reading Companion.
 
 ---
 

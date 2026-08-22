@@ -1,14 +1,24 @@
 #!/usr/bin/env bash
-# Regenerate index.html and the three PDFs from the Markdown sources.
+# Regenerate index.html and the four PDFs from the Markdown sources.
 # Requires: pandoc, xelatex (texlive-xetex), python3.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(dirname "$HERE")"
 
+# Prefer a full TeX Live/MacTeX install over a minimal TinyTeX earlier on PATH:
+# the header needs packages (newunicodechar) and fonts a minimal install lacks.
+for d in /usr/local/texlive/*/bin/*; do
+  [ -x "$d/xelatex" ] && [ -e "$d/../../texmf-dist/tex/latex/newunicodechar" ] && \
+    PATH="$d:$PATH" && break
+done
+
 pdf () {  # $1 = markdown basename (no ext), $2 = date line
   python3 - "$REPO/$1.md" <<'PY'
-import sys, pathlib
-lines = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8").split("\n")
+import sys, re, pathlib
+src = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
+# cross-document links point at sibling .md files; in print, point them at the PDFs
+src = re.sub(r'\]\(([\w.-]+)\.md(?:#[^)]*)?\)', r'](\1.pdf)', src)
+lines = src.split("\n")
 title = lines[0].lstrip("# ").strip()
 cut, sub = 0, ""
 for i, l in enumerate(lines[:8]):
@@ -16,6 +26,7 @@ for i, l in enumerate(lines[:8]):
     if s.startswith("**") and s.endswith("**") and len(s) > 4:
         sub = s.strip("*"); cut = i; break
 sub = sub.replace("~", "approx. ")
+sub = re.sub(r"\*(.+?)\*", r"\\emph{\1}", sub)
 d = pathlib.Path("/tmp/sf-build"); d.mkdir(exist_ok=True)
 (d/"body.md").write_text("\n".join(lines[cut+1:]), encoding="utf-8")
 (d/"title.txt").write_text(title, encoding="utf-8")
@@ -31,6 +42,7 @@ PY
 }
 
 pdf sabbatical-film-syllabus "Prepared 19 August 2026"
+pdf reading-companion        "Links checked 19 August 2026"
 pdf where-to-watch           "Availability checked 17 August 2026"
 pdf syllabus-comparison      "Compiled 19 August 2026"
 python3 "$HERE/mkhtml.py"

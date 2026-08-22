@@ -1,13 +1,20 @@
 % ---- fonts ----
 \usepackage{fontspec}
-\setmainfont{TeX Gyre Pagella}
-\setsansfont{TeX Gyre Heros}[Scale=0.92]
-\newfontfamily\symbolfont{DejaVu Sans}
+% Load by filename via kpathsea: these ship with TeX Live but are not registered
+% with the OS font database, so XeTeX on macOS can't find them by family name.
+\newcommand{\gyre}{Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+  ItalicFont=*-italic, BoldItalicFont=*-bolditalic}
+\setmainfont{texgyrepagella}[\gyre]
+\setsansfont{texgyreheros}[\gyre, Scale=0.92]
+\newfontfamily\symbolfont{DejaVuSans}[Extension=.ttf, UprightFont=*, BoldFont=*-Bold,
+  ItalicFont=*-Oblique, BoldItalicFont=*-BoldOblique]
 \usepackage{newunicodechar}
 \newunicodechar{✓}{{\symbolfont ✓}}
 \newunicodechar{✗}{{\symbolfont ✗}}
 \newunicodechar{★}{{\symbolfont ★}}
 \newunicodechar{·}{\textperiodcentered}
+\newunicodechar{←}{{\symbolfont ←}}
+\newunicodechar{→}{{\symbolfont →}}
 
 % ---- page ----
 \usepackage[letterpaper,margin=1in,top=1.05in,bottom=1.05in,headheight=15pt]{geometry}

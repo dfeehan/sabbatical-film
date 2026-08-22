@@ -2,10 +2,12 @@ import subprocess, re, html, pathlib
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 DOCS = [
-    ("syllabus",   "The Syllabus",   "42 weeks, 85 films",        "sabbatical-film-syllabus.md"),
-    ("watch",      "Where to Watch", "streaming availability",     "where-to-watch.md"),
-    ("comparison", "Comparison",     "vs. 11 university syllabi",  "syllabus-comparison.md"),
+    ("syllabus",   "The Syllabus",       "42 weeks, 85 films",        "sabbatical-film-syllabus.md"),
+    ("companion",  "Reading Companion",  "essays, film by film",      "reading-companion.md"),
+    ("watch",      "Where to Watch",     "streaming availability",    "where-to-watch.md"),
+    ("comparison", "Comparison",         "vs. 11 university syllabi", "syllabus-comparison.md"),
 ]
+MD2KEY = {md: key for key, _, _, md in DOCS}
 
 def convert(md):
     out = subprocess.run(
@@ -15,15 +17,18 @@ def convert(md):
     out = re.sub(r'^\s*<h1[^>]*>.*?</h1>', '', out, count=1, flags=re.S)
     return out
 
-def slugify(s, seen={}):
+def _slug(s):
     s = re.sub(r'<[^>]+>', '', s)
     s = html.unescape(s)
     s = re.sub(r'[^\w\s-]', '', s).strip().lower()
-    s = re.sub(r'[\s_-]+', '-', s)
+    return re.sub(r'[\s_-]+', '-', s)
+
+def slugify(s, seen={}):
+    s = _slug(s)
     n = seen.get(s, 0); seen[s] = n+1
     return s if n == 0 else f"{s}-{n}"
 
-sections, navs = [], []
+sections, navs, ids = [], [], set()
 for key, label, blurb, md in DOCS:
     body = convert(md)
     # give every h2 an id and collect for the nav
@@ -32,6 +37,7 @@ for key, label, blurb, md in DOCS:
         txt = m.group(2)
         sid = slugify(f"{key}-{txt}")
         items.append((sid, re.sub(r'<[^>]+>', '', txt)))
+        ids.add(sid)
         return f'<h2 id="{sid}">{txt}</h2>'
     body = re.sub(r'<h2[^>]*>(.*?)</h2>', lambda m: tag(re.match(r'()(.*)', m.group(1))), body, flags=re.S)
     sections.append(f'<section class="doc" id="doc-{key}" data-doc="{key}">{body}</section>')
@@ -142,6 +148,17 @@ if(location.hash){const el=document.querySelector(location.hash);
   const d=el&&el.closest('.doc'); if(d)start=d.dataset.doc;}
 show(start);
 if(location.hash){const el=document.querySelector(location.hash); if(el)setTimeout(()=>el.scrollIntoView(),60);}
+// in-page links may point into a doc that isn't showing: switch to it first
+document.querySelectorAll('main a[href^="#"]').forEach(a=>{
+  a.onclick=e=>{
+    const el=document.querySelector(a.getAttribute('href'));
+    if(!el) return;
+    const d=el.closest('.doc');
+    if(d&&!d.classList.contains('show')){e.preventDefault(); show(d.dataset.doc);
+      history.replaceState(null,'',a.getAttribute('href'));
+      setTimeout(()=>el.scrollIntoView(),0);}
+  };
+});
 // highlight nav on scroll
 const heads=[...document.querySelectorAll('h2[id]')];
 const io=new IntersectionObserver(es=>{
@@ -154,13 +171,29 @@ const io=new IntersectionObserver(es=>{
 heads.forEach(h=>io.observe(h));
 """
 
-PDFS = {"syllabus":"sabbatical-film-syllabus.pdf","watch":"where-to-watch.pdf",
-        "comparison":"syllabus-comparison.pdf"}
+PDFS = {key: md[:-3] + ".pdf" for key, _, _, md in DOCS}
 titled = []
 for (key,label,blurb,md), sec in zip(DOCS, sections):
     sec = sec.replace('>', f'><h1 class="doctitle">{html.escape(label)}</h1>'
         f'<a class="pdflink" href="{PDFS[key]}">Download PDF &#8599;</a>', 1)
     titled.append(sec)
+
+def xdoc(m):
+    """Turn a link to another Markdown file into an in-page link to that doc's tab."""
+    md, frag = m.group(1), m.group(2) or ""
+    key = MD2KEY.get(md)
+    if key is None:
+        return m.group(0)
+    if frag:
+        target = _slug(f"{key}-{frag[1:]}")
+        if target not in ids:
+            print(f"  ! unresolved cross-link: {md}{frag}")
+            target = f"doc-{key}"
+    else:
+        target = f"doc-{key}"
+    return f'href="#{target}" class="xdoc"'
+
+titled = [re.sub(r'href="([\w.-]+\.md)(#[^"]*)?"', xdoc, t) for t in titled]
 
 out = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">

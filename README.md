@@ -19,6 +19,7 @@ short film (14–32 min) to cover avant-garde and documentary work.
 | File | What it is |
 |---|---|
 | [`sabbatical-film-syllabus.md`](sabbatical-film-syllabus.md) | The schedule. 42 dated weeks, 24 Aug 2026 – 4 Jul 2027, with a note on why each pairing works and one reading per unit. |
+| [`reading-companion.md`](reading-companion.md) | Essays to read *after* each film — two or three linked pieces per title, mostly Criterion, Ebert, Bordwell, and Senses of Cinema. Cross-linked with the syllabus unit by unit. |
 | [`where-to-watch.md`](where-to-watch.md) | US streaming availability for all 85 films — what's on the Criterion Channel, what's free via Kanopy/Tubi, what needs renting, and the year's total cost. |
 | [`syllabus-comparison.md`](syllabus-comparison.md) | How this plan compares to eleven real university film syllabi (194 screenings, 147 distinct films), with the overlap analysis that produced the final round of additions. |
 | `notes/` | Viewing notes go here. |
@@ -27,8 +28,9 @@ short film (14–32 min) to cover avant-garde and documentary work.
 
 | File | What it is |
 |---|---|
-| [`index.html`](index.html) | **Browsable version.** All three documents in one self-contained page with a sidebar for jumping between units. Open it in any browser — no server needed. Works offline, respects dark mode, prints cleanly. |
+| [`index.html`](index.html) | **Browsable version.** All four documents in one self-contained page with a sidebar for jumping between units. Open it in any browser — no server needed. Works offline, respects dark mode, prints cleanly. |
 | `sabbatical-film-syllabus.pdf` | The syllabus, typeset (14 pp., letter). |
+| `reading-companion.pdf` | Reading companion, typeset (25 pp.). |
 | `where-to-watch.pdf` | Availability guide, typeset (8 pp.). |
 | `syllabus-comparison.pdf` | Comparison, typeset (5 pp.). |
 | `build/` | Scripts that regenerate the HTML and PDFs from the Markdown. |
@@ -39,7 +41,7 @@ The Markdown files are the source of truth. After editing any of them, run:
 ./build/build.sh
 ```
 
-which rebuilds all four generated files. Requires `pandoc`, `xelatex`
+which rebuilds all five generated files. Requires `pandoc`, `xelatex`
 (`brew install pandoc` and MacTeX or `brew install --cask basictex`), and `python3`.
 
 ## The units
@@ -67,7 +69,8 @@ which rebuilds all four generated files. Requires `pandoc`, `xelatex`
    attention and collapse without it.
 2. **Write 3–4 sentences after each one**, before reading anything about it.
    Put them in `notes/`.
-3. **Read the criticism after, never before.** One piece, ten minutes.
+3. **Read the criticism after, never before.** One piece, ten minutes —
+   [`reading-companion.md`](reading-companion.md) has the links, per film.
 
 Optional scaffolding: Bordwell & Thompson, *Film Art: An Introduction*,
 chapters 4–6, read during Unit 1.
