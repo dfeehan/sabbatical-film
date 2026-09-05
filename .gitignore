@@ -24,3 +24,6 @@ Icon?
 __pycache__/
 *.pyc
 .venv/
+
+# Third-party materials (not redistributable)
+materials/
