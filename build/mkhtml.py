@@ -20,7 +20,12 @@ def convert(md):
 def _slug(s):
     s = re.sub(r'<[^>]+>', '', s)
     s = html.unescape(s)
-    s = re.sub(r'[^\w\s-]', '', s).strip().lower()
+    # keep letters, digits, spaces and hyphens — the same characters GitHub's
+    # heading slugs keep, so anchors written against the Markdown resolve here
+    # (pandoc puts a non-breaking space after abbreviations — "Dr. Caligari" —
+    # so treat every kind of whitespace as a word separator)
+    s = ''.join(c for c in s if c.isalpha() or c.isdigit() or c.isspace() or c in '-_')
+    s = s.strip().lower()
     return re.sub(r'[\s_-]+', '-', s)
 
 def slugify(s, seen={}):
@@ -40,6 +45,15 @@ for key, label, blurb, md in DOCS:
         ids.add(sid)
         return f'<h2 id="{sid}">{txt}</h2>'
     body = re.sub(r'<h2[^>]*>(.*?)</h2>', lambda m: tag(re.match(r'()(.*)', m.group(1))), body, flags=re.S)
+
+    # h3/h4 get ids too — they're what the per-film cross-links point at — but
+    # stay out of the sidebar, which lists units only
+    def subtag(m):
+        lvl, txt = m.group(1), m.group(2)
+        sid = slugify(f"{key}-{txt}")
+        ids.add(sid)
+        return f'<h{lvl} id="{sid}">{txt}</h{lvl}>'
+    body = re.sub(r'<h([34])[^>]*>(.*?)</h\1>', subtag, body, flags=re.S)
     sections.append(f'<section class="doc" id="doc-{key}" data-doc="{key}">{body}</section>')
     links = "\n".join(f'<a class="navlink" href="#{i}">{html.escape(t)}</a>' for i, t in items)
     navs.append(f'<div class="navgroup" data-doc="{key}"><div class="navhead">{html.escape(label)}'
