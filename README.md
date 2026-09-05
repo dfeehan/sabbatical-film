@@ -33,7 +33,7 @@ short film (14–32 min) to cover avant-garde and documentary work.
 | `reading-companion.pdf` | Reading companion, typeset (25 pp.). |
 | `where-to-watch.pdf` | Availability guide, typeset (8 pp.). |
 | `syllabus-comparison.pdf` | Comparison, typeset (5 pp.). |
-| `build/` | Scripts that regenerate the HTML and PDFs from the Markdown. |
+| `build/` | Scripts that regenerate the HTML and PDFs from the Markdown, and publish them to the website. |
 
 The Markdown files are the source of truth. After editing any of them, run:
 
@@ -43,6 +43,32 @@ The Markdown files are the source of truth. After editing any of them, run:
 
 which rebuilds all five generated files. Requires `pandoc`, `xelatex`
 (`brew install pandoc` and MacTeX or `brew install --cask basictex`), and `python3`.
+
+### Publishing
+
+The browsable version is also served, unlisted, at
+<https://dennisfeehan.org/film/> — nothing links to it and the page carries a
+`noindex` tag, so it is reachable only by typing the URL.
+
+After editing the Markdown, publish with:
+
+```bash
+./build/build.sh              # regenerate index.html and the PDFs
+./build/publish-to-website.sh # copy them into the website repo
+cd ~/Dropbox/website
+git add film docs/film && git commit -m "Update /film" && git push origin master
+```
+
+`publish-to-website.sh` copies `index.html` and the four PDFs into two places in
+the website repo, following the same pattern as the course syllabi:
+
+- `film/` — the source side, listed under `resources` in `_quarto.yml`, so a
+  clean Quarto rebuild regenerates the served copy
+- `docs/film/` — the rendered site GitHub Pages actually serves
+
+It re-injects the `noindex` tag on each copy. Set `WEBSITE_REPO` if the website
+lives somewhere other than `~/Dropbox/website`. Note that the website repo's
+branch is `master`, not `main`. GitHub Pages takes a minute or two to redeploy.
 
 ## The units
 
